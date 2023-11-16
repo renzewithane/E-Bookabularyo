@@ -1,9 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IntroductionActivity">
+    tools:context=".Activity.IntroductionActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/character1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/panel_char_one"
+            android:scaleType="centerCrop"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/character2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/panel_char_two"
+            android:scaleType="centerCrop"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/character1Message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/message1"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+
+        android:layout_marginTop="288dp"
+
+        android:layout_marginStart="138dp"
+        android:layout_marginEnd="@dimen/veryhigh"
+
+        android:textColor="@color/white"
+        android:justificationMode="inter_word"
+        android:fontFamily="@font/dongle_regular"
+        android:lineHeight="@dimen/mid"
+
+        android:textSize="@dimen/text_hard"
+
+        >
+    </TextView>
+    <TextView
+        android:id="@+id/character2Message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/message2"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+
+        android:layout_marginTop="288dp"
+
+        android:layout_marginStart="138dp"
+        android:layout_marginEnd="@dimen/veryhigh"
+
+        android:textColor="@color/white"
+        android:justificationMode="inter_word"
+        android:fontFamily="@font/dongle_regular"
+        android:lineHeight="@dimen/mid"
+
+        android:textSize="@dimen/text_hard"
+
+        >
+    </TextView>
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+
+        android:text="@string/next"
+
+        android:fontFamily="@font/dongle_bold"
+
+        android:background="@drawable/rounded_corner_shape"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_header"
+        android:layout_marginStart="168dp"
+        android:layout_marginEnd="@dimen/insane"
+        android:layout_marginBottom="168dp"
+
+        >
+        
+    </Button>
+</RelativeLayout>

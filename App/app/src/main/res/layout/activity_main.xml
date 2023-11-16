@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".Activity.MainActivity"
 
     >
     <ImageView
@@ -13,4 +13,68 @@
         android:src="@drawable/main_bg"
         android:scaleType="centerCrop"
         />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ano_ang_iyong_pangalan"
+
+        android:fontFamily="@font/dongle_bold"
+
+        android:textSize="@dimen/text_header"
+        android:textColor="@color/white"
+
+        android:layout_above="@+id/inputLayout"
+
+        android:layout_marginStart="@dimen/veryhigh"
+        android:layout_marginEnd="@dimen/veryhigh"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="36"
+        >
+
+    </TextView>
+    <LinearLayout
+        android:id="@+id/inputLayout"
+
+        android:layout_alignParentBottom="true"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_marginStart="@dimen/veryhigh"
+        android:layout_marginEnd="@dimen/veryhigh"
+        android:layout_marginBottom="@dimen/veryhigh"
+
+        android:weightSum="1"
+        >
+        <EditText
+            android:id="@+id/ediTextNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="0.2"
+
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+
+
+            android:background="@drawable/rounded_corner_shape_edittext_box"
+            android:backgroundTint="#9F000000"
+            android:padding="@dimen/mid"
+            >
+
+        </EditText>
+
+        <Button
+            android:id="@+id/proceedButton"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:background="@drawable/baseline_arrow_forward_24"
+            android:layout_weight="0.8"
+            />
+    </LinearLayout>
+
 </RelativeLayout>

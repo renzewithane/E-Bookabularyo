@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WelcomeActivity">
+    tools:context=".Activity.WelcomeActivity">
 
     <RelativeLayout
         android:id="@+id/welcomeMessageLayout"
@@ -24,24 +24,22 @@
             android:layout_height="wrap_content"
 
             android:layout_centerInParent="true"
-            android:layout_marginStart="@dimen/veryhigh"
 
-            android:layout_marginTop="@dimen/veryhigh"
+            android:layout_marginStart="@dimen/insane"
+            android:layout_marginEnd="@dimen/insane"
 
-            android:layout_marginEnd="@dimen/veryhigh"
-            android:layout_marginBottom="@dimen/veryhigh"
+            android:paddingTop="@dimen/insane"
+
 
             android:fontFamily="@font/dongle_regular"
+
+            android:justificationMode="inter_word"
 
             android:lineHeight="@dimen/high"
 
             android:text="@string/opening_message"
-
-            android:justificationMode="inter_word"
-
             android:textColor="@color/white"
-            android:textSize="@dimen/text_hard"
-            >
+            android:textSize="@dimen/text_hard">
 
         </TextView>
     </RelativeLayout>
