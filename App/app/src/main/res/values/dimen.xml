@@ -13,4 +13,5 @@
     <dimen name="text_verybig">48sp</dimen>
 
     <dimen name="text_header">36sp</dimen>
+    <dimen name="text_header2">32sp</dimen>
 </resources>
