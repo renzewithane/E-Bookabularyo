@@ -10,5 +10,7 @@
     <dimen name="text_low">12sp</dimen>
     <dimen name="text_regular">16sp</dimen>
     <dimen name="text_hard">21sp</dimen>
+    <dimen name="text_verybig">48sp</dimen>
+
     <dimen name="text_header">36sp</dimen>
 </resources>

@@ -47,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
         // Checks if the user already stored user name in the app
         if(!userName.isEmpty())
         {
-            // Proceed to Home
-            startActivity(new Intent(MainActivity.this, HomeActivity.class));
+            // Method: Go to Home
+            SwitchToHome(userName);
             return;
         }
 
@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String userInput = editTextInputName.getText().toString().trim();
 
+                // Check
                 if(userInput.isEmpty())
                 {
                     editTextInputName.setError("This field cannot be empty");
@@ -69,16 +70,32 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 // Store username data
-
                 SharedPreferences.Editor editor = mPreferences.edit();
                 editor.putString("userName", userInput);
                 editor.apply();
 
-                // Proceed to Home
-                startActivity(new Intent(MainActivity.this, HomeActivity.class));
+                // Method: Go to Home
+                SwitchToHome(userInput);
+
+                // End
                 finish();
 
             }
         });
+    }
+
+    /**
+     * Method for switching the activity to home with extra data
+     */
+    private void SwitchToHome(String userName)
+    {
+        // Intent
+        Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+
+        // Send Data to home
+        intent.putExtra("userData", userName);
+
+        // Proceed to Home
+        startActivity(intent);
     }
 }
