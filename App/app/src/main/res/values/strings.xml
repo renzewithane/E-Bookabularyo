@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">E-Bookabularyo</string>
     <string name="e_bokalbularyo">E-BOKALBULARYO</string>
+    <string name="opening_message">
+        Ang iyong kasama sa masusing pag-aaral ng bokabularyo at panitikan. Narito ako upang gabayan ka sa pag-aaral tungo sa malalimang pag-unawa ng mga salita, kahulugan, at konsepto na may kaugnayan sa makulay na mundo ng panitikan. \n\n    Asahan mong ako ay laging kasama sa iyong paglalakbay sa mundo ng kaalaman!
+    </string>
+
+    <string name="message1">Kumusta! Ako si Bb. Bernadeth M. Del Barrio, isang mananaliksik sa larangan ng edukasyon na may kursong Batsilyer sa Sekundaryang Edukasyon, Medyor sa Filipino. Bilang isang tagapagtuklas at tagapagtaguyod ng kahalagahan ng wika at kulturang Filipino, layunin kong mapalakas ang wika at panitikan gamit ang e-kagamitang ito. Halina’t, kasama mo kami sa iyong paglalakbay!</string>
+    <string name="message2">Kumusta! Ako si Bb. Bernadette R. Odiaz, isang mapagkumbabang mananaliksik sa larangan ng edukasyon na may kursong Batsilyer sa Sekundaryang Edukasyon Medyor sa Filipino. Bilang tagapagtuklas na may pagnanais na makatulong sa pag-unlad ng kaalaman sa paggamit ng elektronikong kagamitan para sa bokabularyo at panitikan. Kami ay narito para kayo ay gabayan. Kaya, halina\'t kasama mo kami sa iyong paglalakbay!</string>
 </resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/welcomeMessageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/start_page"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/veryhigh"
+
+            android:layout_marginTop="@dimen/veryhigh"
+
+            android:layout_marginEnd="@dimen/veryhigh"
+            android:layout_marginBottom="@dimen/veryhigh"
+
+            android:fontFamily="@font/dongle_regular"
+
+            android:lineHeight="@dimen/high"
+
+            android:text="@string/opening_message"
+
+            android:justificationMode="inter_word"
+
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_hard"
+            >
+
+        </TextView>
+    </RelativeLayout>
+
+
+
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:textSize="@dimen/text_header"
+        android:textStyle="bold"
+        android:text="GET STARTED"
+        android:textColor="@color/white"
+        android:layout_marginStart="@dimen/insane"
+        android:layout_marginEnd="@dimen/insane"
+        android:layout_marginBottom="@dimen/high"
+
+
+
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rounded_corner_shape"
+
+        android:fontFamily="@font/dongle_bold"
+
+        >
+
+    </Button>
+
+</RelativeLayout>
