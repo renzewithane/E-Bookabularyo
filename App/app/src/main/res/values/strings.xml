@@ -12,4 +12,5 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hear_a_story">Hear a story</string>
+    <string name="select_quizzes">Select Quizzes</string>
 </resources>

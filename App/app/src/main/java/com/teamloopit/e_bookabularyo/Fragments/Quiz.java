@@ -1,66 +1,80 @@
 package com.teamloopit.e_bookabularyo.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.teamloopit.e_bookabularyo.Activity.QuizActivity;
+import com.teamloopit.e_bookabularyo.Activity.StoryActivity;
+import com.teamloopit.e_bookabularyo.KwentoAdapter;
+import com.teamloopit.e_bookabularyo.KwentoModel;
 import com.teamloopit.e_bookabularyo.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Quiz#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+import java.util.List;
+
 public class Quiz extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     public Quiz() {
-        // Required empty public constructor
+
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Quiz.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static Quiz newInstance(String param1, String param2) {
-        Quiz fragment = new Quiz();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_quiz, container, false);
+        View view = inflater.inflate(R.layout.fragment_quiz, container, false);
+
+        // Recyclerview for the list view of the kwentos
+        RecyclerView kwentoRecyclerView = view.findViewById(R.id.kwentoRecyclerView);
+
+        List<KwentoModel> dataList = new ArrayList<>();
+        dataList = KwentoPopulator();
+
+        KwentoAdapter adapter = new KwentoAdapter(dataList);
+        kwentoRecyclerView.setAdapter(adapter);
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+        kwentoRecyclerView.setLayoutManager(layoutManager);
+
+        // Listens for item click then start the activity with the title of the kwento
+        adapter.setOnItemClickListener(new KwentoAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(KwentoModel kwentoModel) {
+
+                Intent intent = new Intent(getContext(), QuizActivity.class);
+
+                intent.putExtra("storyTitleData", kwentoModel.getKwentoTitle());
+
+                startActivity(intent);
+
+                Toast.makeText(getContext(), "This is "+ kwentoModel.getKwentoTitle() + " Quiz ", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        return view;
+    }
+
+    /**
+     * Method for populating kwento
+     */
+    private List<KwentoModel> KwentoPopulator()
+    {
+        List<KwentoModel> list = new ArrayList<>();
+        list.add(new KwentoModel(R.drawable.book_pic_one, "Sarranggola"));
+        list.add(new KwentoModel(R.drawable.book_pic_two, "Mabangis Na Lungsod"));
+        list.add(new KwentoModel(R.drawable.watdahill, "What the Duck is this"));
+
+        return list;
     }
 }

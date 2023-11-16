@@ -3,8 +3,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.Quiz">
+    tools:context=".Fragments.Quiz"
+    android:layout_margin="@dimen/mid"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
 
 
+            android:layout_marginTop="@dimen/insane"
+            android:fontFamily="@font/dongle_regular"
+            android:gravity="center"
+            android:text="@string/select_quizzes"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_header2">
+
+        </TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/kwentoRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="@dimen/insane"
+            >
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
 
 </FrameLayout>
