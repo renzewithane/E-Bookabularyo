@@ -13,4 +13,26 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hear_a_story">Hear a story</string>
     <string name="select_quizzes">Select Quizzes</string>
+
+
+    <string name="Panuto1_kite">I. Multiple choice \nPanuto: \nPiliin at pindutin ang tamang sagot</string>
+    <string name="Panuto2_kite">II. Multiple choice \nPanuto: \nTukuyin ang kasingkahulugan ng mga salitang may salungguhit na halaw sa
+                            kuwentong Ang Saranggola</string>
+    <string name="Panuto3_kite">II. Multiple choice \nPanuto: \nPiliin at pindutin ang tamang sagot</string>
+
+    <string name="Panuto1">I. Multiple choice \nPanuto: \nPiliin at pindutin ang tamang sagot</string>
+    <string name="Panuto2">II. Multiple choice \nPanuto: \nTukuyin ang kasingkahulugan ng mga salitang may salungguhit na halaw sa
+                            kuwentong Mabangis na Lungsod ni Efren Abueg.</string>
+    <string name="Panuto3">III. Matching Type \nPanuto: \nTukuyin ang kasingkahulugan ng salita </string>
+    <string name="Q1_test2">1. Ang gabi ay mabilis na  <u>lumagom</u> sa malalaki’t maliliit na lansangan</string>
+    <string name="Q2_test2">2. Dumantay sa mukha ng mga taong araw-araw na may bagong <u>lunas</u>  na walang bisa.</string>
+    <string name="Q3_test2">3. <u>Mabangis na liwanag</u>  ng ilaw-dagitab.</string>
+    <string name="Q4_test2">4. Isang bagay na hinahanap na hinahanap sa isang <u>marikit</u>  na altar.</string>
+    <string name="Q5_test2">5. Ang pangambang <u>sumisigid</u>  sa kaniyang mga laman.</string>
+    <string name="Q6_test2">6. Alisin na ang <u>nagtatayugang</u>  gusali roon.</string>
+    <string name="Q7_test2">7. Ang <u>imbay</u>  ng mga kamay at hiwatig ng pagwawalang bahala.</string>
+    <string name="Q8_test2">8. Ang mga tao ay <u>naghihikahos</u>  din.</string>
+    <string name="Q9_test2">9. Nandidiring mapadikit sa <u>marurusing</u>  palad na wari bang mga kamay ay manipis.</string>
+    <string name="Q10_test2">10. Ang nakikita niya ay irap, pandidiri, at <u>pagkasuklam</u> .</string>
+
 </resources>

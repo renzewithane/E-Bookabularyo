@@ -1,7 +1,9 @@
 package com.teamloopit.e_bookabularyo.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
 
+import com.teamloopit.e_bookabularyo.R;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -15,14 +17,14 @@ import android.widget.TextView;
 import com.teamloopit.e_bookabularyo.Fragments.Quiz;
 import com.teamloopit.e_bookabularyo.R;
 
-public class QuizActivity extends AppCompatActivity implements View.OnClickListener{
+public class Mabangis extends AppCompatActivity implements View.OnClickListener{
 
     RelativeLayout relativeLayout_test1,relativeLayout_test2,relativeLayout_test3;
     int score_test1_value=0;
     //test1
     TextView questions;
     Button OpA,OpB;
-    int totalQuestion = SaranggolaQA.questions_test1.length;
+    int totalQuestion = MabangisQA.questions_test1.length;
     int currentQuestionIndex = 0;
     String selectedAnswer = "";
 
@@ -31,9 +33,9 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     //test2
     TextView questions2;
     int score_test2_value=0;
-    Button OpA_test2,OpB_test2,OpC_test2,OpD_test2;
+    Button OpA_test2,OpB_test2,OpC_test2;
 
-    int totalQuestion_test2 = SaranggolaQA.questions_test2.length;
+    int totalQuestion_test2 = MabangisQA.questions_test2.length;
     int currentQuestionIndex_test2 = 0;
     //test2
 
@@ -43,7 +45,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     int score_test3_value=0;
     Button OpA_test3,OpB_test3,OpC_test3,OpD_test3,OpE_test3;
 
-    int totalQuestion_test3 = SaranggolaQA.questions_test3.length;
+    int totalQuestion_test3 = MabangisQA.questions_test3.length;
     int currentQuestionIndex_test3 = 0;
 
     //test3
@@ -63,7 +65,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz);
+        setContentView(R.layout.activity_mabangis);
 
         panuto = findViewById(R.id.Panuto);
         panuto_text = findViewById(R.id.Panuto_tes2);
@@ -94,11 +96,9 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         OpA_test2 = findViewById(R.id.Q2_A);
         OpB_test2 = findViewById(R.id.Q2_B);
         OpC_test2 = findViewById(R.id.Q2_C);
-        OpD_test2 = findViewById(R.id.Q2_D);
         OpA_test2.setOnClickListener(this);
         OpB_test2.setOnClickListener(this);
         OpC_test2.setOnClickListener(this);
-        OpD_test2.setOnClickListener(this);
 
 
         //test2
@@ -124,7 +124,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         //test3
 
 
-        panuto_text.setText(R.string.Panuto1_kite);
+        panuto_text.setText(R.string.Panuto1);
         panuto.setVisibility(View.VISIBLE);
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -134,6 +134,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                 loadQuestion_tes1();
             }
         });
+
     }
 
     @Override
@@ -145,7 +146,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
             OpB.setEnabled(false);
             Button clickedButton = (Button) view;
             selectedAnswer  = clickedButton.getText().toString();
-            if(selectedAnswer.equals(SaranggolaQA.Correct_answer_test1[currentQuestionIndex])){
+            if(selectedAnswer.equals(MabangisQA.Correct_answer_test1[currentQuestionIndex])){
                 clickedButton.setBackgroundColor(Color.GREEN);
                 clickedButton.setText("CORRECT");
                 score_test1_value++;
@@ -174,14 +175,12 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
             OpA_test2.setBackgroundColor(Color.WHITE);
             OpB_test2.setBackgroundColor(Color.WHITE);
             OpC_test2.setBackgroundColor(Color.WHITE);
-            OpD_test2.setBackgroundColor(Color.WHITE);
             OpA_test2.setEnabled(false);
             OpB_test2.setEnabled(false);
             OpC_test2.setEnabled(false);
-            OpD_test2.setEnabled(false);
             Button clickedButton = (Button) view;
             selectedAnswer  = clickedButton.getText().toString();
-            if(selectedAnswer.equals(SaranggolaQA.Correct_answer_test2[currentQuestionIndex_test2])){
+            if(selectedAnswer.equals(MabangisQA.Correct_answer_test2[currentQuestionIndex_test2])){
                 clickedButton.setBackgroundColor(Color.GREEN);
                 clickedButton.setText("CORRECT");
                 score_test2_value++;
@@ -218,7 +217,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
             OpE_test3.setEnabled(false);
             Button clickedButton = (Button) view;
             selectedAnswer  = clickedButton.getText().toString();
-            if(selectedAnswer.equals(SaranggolaQA.Correct_answer_test3[currentQuestionIndex_test3])){
+            if(selectedAnswer.equals(MabangisQA.Correct_answer_test3[currentQuestionIndex_test3])){
                 clickedButton.setBackgroundColor(Color.GREEN);
                 clickedButton.setText("CORRECT");
                 score_test3_value++;
@@ -256,9 +255,9 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
 
-        questions.setText(SaranggolaQA.questions_test1[currentQuestionIndex]);
-        OpA.setText(SaranggolaQA.Answers_test1[currentQuestionIndex][0]);
-        OpB.setText(SaranggolaQA.Answers_test1[currentQuestionIndex][1]);
+        questions.setText(MabangisQA.questions_test1[currentQuestionIndex]);
+        OpA.setText(MabangisQA.Answers_test1[currentQuestionIndex][0]);
+        OpB.setText(MabangisQA.Answers_test1[currentQuestionIndex][1]);
 
 
     }
@@ -267,12 +266,10 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         OpA_test2.setEnabled(true);
         OpB_test2.setEnabled(true);
         OpC_test2.setEnabled(true);
-        OpD_test2.setEnabled(true);
 
         OpA_test2.setBackgroundColor(Color.WHITE);
         OpB_test2.setBackgroundColor(Color.WHITE);
         OpC_test2.setBackgroundColor(Color.WHITE);
-        OpD_test2.setBackgroundColor(Color.WHITE);
         if(currentQuestionIndex_test2 == totalQuestion_test2){
 
             test_Panuto();
@@ -307,10 +304,9 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
             questions2.setText(R.string.Q10_test2);
         }
 
-        OpA_test2.setText(SaranggolaQA.Answers_test2[currentQuestionIndex_test2][0]);
-        OpB_test2.setText(SaranggolaQA.Answers_test2[currentQuestionIndex_test2][1]);
-        OpC_test2.setText(SaranggolaQA.Answers_test2[currentQuestionIndex_test2][2]);
-        OpD_test2.setText(SaranggolaQA.Answers_test2[currentQuestionIndex_test2][3]);
+        OpA_test2.setText(MabangisQA.Answers_test2[currentQuestionIndex_test2][0]);
+        OpB_test2.setText(MabangisQA.Answers_test2[currentQuestionIndex_test2][1]);
+        OpC_test2.setText(MabangisQA.Answers_test2[currentQuestionIndex_test2][2]);
 
 
 
@@ -336,16 +332,19 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
             finishQuiz();
             return;
         }
-        questions3.setText(SaranggolaQA.questions_test3[currentQuestionIndex_test3]);
-        OpA_test3.setText(SaranggolaQA.Answers_test3[currentQuestionIndex_test3][0]);
-        OpB_test3.setText(SaranggolaQA.Answers_test3[currentQuestionIndex_test3][1]);
-        OpC_test3.setText(SaranggolaQA.Answers_test3[currentQuestionIndex_test3][2]);
-        OpD_test3.setText(SaranggolaQA.Answers_test3[currentQuestionIndex_test3][3]);
-        OpE_test3.setText(SaranggolaQA.Answers_test3[currentQuestionIndex_test3][4]);
+        questions3.setText(MabangisQA.questions_test3[currentQuestionIndex_test3]);
+        OpA_test3.setText(MabangisQA.Answers_test3[currentQuestionIndex_test3][0]);
+        OpB_test3.setText(MabangisQA.Answers_test3[currentQuestionIndex_test3][1]);
+        OpC_test3.setText(MabangisQA.Answers_test3[currentQuestionIndex_test3][2]);
+        OpD_test3.setText(MabangisQA.Answers_test3[currentQuestionIndex_test3][3]);
+        OpE_test3.setText(MabangisQA.Answers_test3[currentQuestionIndex_test3][4]);
 
 
 
     }
+
+
+
     void continue_test2(){
         relativeLayout_test1.setVisibility(View.GONE);
         relativeLayout_test2.setVisibility(View.VISIBLE);
@@ -396,10 +395,10 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
 
     void test_Panuto(){
         if (relativeLayout_test1.getVisibility() == View.VISIBLE){
-            panuto_text.setText(R.string.Panuto2_kite);
+            panuto_text.setText(R.string.Panuto2);
 
         } else if (relativeLayout_test1.getVisibility() == View.GONE) {
-            panuto_text.setText(R.string.Panuto3_kite);
+            panuto_text.setText(R.string.Panuto3);
 
         }
 
@@ -413,14 +412,14 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View v) {
                 if (relativeLayout_test1.getVisibility() == View.VISIBLE){
-                    panuto_text.setText(R.string.Panuto2_kite);
+                    panuto_text.setText(R.string.Panuto2);
                     relativeLayout_test1.setVisibility(View.GONE);
                     panuto.setVisibility(View.GONE);
                     continue_test2();
 
 
                 } else if (relativeLayout_test1.getVisibility() == View.GONE) {
-                    panuto_text.setText(R.string.Panuto3_kite);
+                    panuto_text.setText(R.string.Panuto3);
                     panuto.setVisibility(View.GONE);
                     continue_test3();
 
