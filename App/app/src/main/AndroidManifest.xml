@@ -15,7 +15,7 @@
             android:name=".Activity.Mabangis"
             android:exported="false" />
         <activity
-            android:name=".Activity.QuizActivity"
+            android:name=".Activity.Sarrangola"
             android:exported="false" />
         <activity
             android:name=".Activity.StoryActivity"

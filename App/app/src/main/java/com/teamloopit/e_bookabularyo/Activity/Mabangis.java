@@ -1,6 +1,9 @@
 package com.teamloopit.e_bookabularyo.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 
 import com.teamloopit.e_bookabularyo.R;
@@ -16,6 +19,7 @@ import android.widget.TextView;
 
 import com.teamloopit.e_bookabularyo.Fragments.Quiz;
 import com.teamloopit.e_bookabularyo.R;
+import com.teamloopit.e_bookabularyo.Utilities;
 
 public class Mabangis extends AppCompatActivity implements View.OnClickListener{
 
@@ -62,6 +66,10 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
 
     //Panuto pop
 
+    private Button startQuizButton;
+    private TextView quizTitle;
+    private String quizTitleStr;
+    private RelativeLayout openingStatementLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -124,6 +132,17 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
         //test3
 
 
+        // Starter
+
+        InitializedMain();
+
+        ShowQuizTime();
+
+
+
+    }
+    private void StartQuiz()
+    {
         panuto_text.setText(R.string.Panuto1);
         panuto.setVisibility(View.VISIBLE);
         ok.setOnClickListener(new View.OnClickListener() {
@@ -134,9 +153,44 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
                 loadQuestion_tes1();
             }
         });
+    }
+    private void ShowQuizTime()
+    {
+        startQuizButton = findViewById(R.id.startQuizAnswerButton);
+        quizTitle = findViewById(R.id.quizKwentoTitle);
+        openingStatementLayout = findViewById(R.id.openingStatementLayout);
 
+        quizTitle.setText(quizTitleStr);
+
+        startQuizButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                StartQuiz();
+
+                openingStatementLayout.setVisibility(View.GONE);
+            }
+        });
     }
 
+    private void InitializedMain()
+    {
+        Intent intent = getIntent();
+
+        if (intent == null)
+        {
+            Utilities.ShowCriticalErrorDialog(this, "Failed Intent", "The app failed to get intent");
+            return;
+        }
+        String data = intent.getStringExtra("storyTitleData");
+
+        if(data.isEmpty())
+        {
+            Utilities.ShowCriticalErrorDialog(this, "Failed Extra", "The extra seems to be empty!");
+            return;
+        }
+
+        quizTitleStr = data;
+    }
     @Override
     public void onClick(View view) {
         if (relativeLayout_test1.getVisibility() == View.VISIBLE){
@@ -147,12 +201,12 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
             Button clickedButton = (Button) view;
             selectedAnswer  = clickedButton.getText().toString();
             if(selectedAnswer.equals(MabangisQA.Correct_answer_test1[currentQuestionIndex])){
-                clickedButton.setBackgroundColor(Color.GREEN);
+                clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
                 clickedButton.setText("CORRECT");
                 score_test1_value++;
             }
             else{
-                clickedButton.setBackgroundColor(Color.RED);
+                clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.red), PorterDuff.Mode.MULTIPLY);
                 clickedButton.setText("WRONG");
                 selectedAnswer  = clickedButton.getText().toString();
 
@@ -167,7 +221,7 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
                     loadQuestion_tes1();
 
                 }
-            },500);
+            },2000);
         }
 
         else if (relativeLayout_test1.getVisibility() == View.GONE && relativeLayout_test2.getVisibility() == View.VISIBLE) {
@@ -181,12 +235,12 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
             Button clickedButton = (Button) view;
             selectedAnswer  = clickedButton.getText().toString();
             if(selectedAnswer.equals(MabangisQA.Correct_answer_test2[currentQuestionIndex_test2])){
-                clickedButton.setBackgroundColor(Color.GREEN);
+                clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
                 clickedButton.setText("CORRECT");
                 score_test2_value++;
             }
             else{
-                clickedButton.setBackgroundColor(Color.RED);
+                clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.red), PorterDuff.Mode.MULTIPLY);
                 clickedButton.setText("WRONG");
                 selectedAnswer  = clickedButton.getText().toString();
 
@@ -201,7 +255,7 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
                     loadQuestion_tes2();
 
                 }
-            },500);
+            },2000);
         }
         else if (relativeLayout_test1.getVisibility() == View.GONE && relativeLayout_test2.getVisibility() == View.GONE
                 && relativeLayout_test3.getVisibility() == View.VISIBLE) {
@@ -218,12 +272,12 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
             Button clickedButton = (Button) view;
             selectedAnswer  = clickedButton.getText().toString();
             if(selectedAnswer.equals(MabangisQA.Correct_answer_test3[currentQuestionIndex_test3])){
-                clickedButton.setBackgroundColor(Color.GREEN);
+                clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
                 clickedButton.setText("CORRECT");
                 score_test3_value++;
             }
             else{
-                clickedButton.setBackgroundColor(Color.RED);
+                clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.red), PorterDuff.Mode.MULTIPLY);
                 clickedButton.setText("WRONG");
                 selectedAnswer  = clickedButton.getText().toString();
 
@@ -238,7 +292,7 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
                     loadQuestion_tes3();
 
                 }
-            },500);
+            },2000);
         }
 
 
@@ -249,6 +303,9 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
 
         OpA.setBackgroundColor(Color.WHITE);
         OpB.setBackgroundColor(Color.WHITE);
+
+        OpA.getBackground().clearColorFilter();
+        OpB.getBackground().clearColorFilter();
         if(currentQuestionIndex == totalQuestion ){
             test_Panuto();
 
@@ -270,6 +327,10 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
         OpA_test2.setBackgroundColor(Color.WHITE);
         OpB_test2.setBackgroundColor(Color.WHITE);
         OpC_test2.setBackgroundColor(Color.WHITE);
+
+        OpA_test2.getBackground().clearColorFilter();
+        OpB_test2.getBackground().clearColorFilter();
+        OpC_test2.getBackground().clearColorFilter();
         if(currentQuestionIndex_test2 == totalQuestion_test2){
 
             test_Panuto();
@@ -326,6 +387,11 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
         OpE_test3.setBackgroundColor(Color.WHITE);
 
 
+        OpA_test3.getBackground().clearColorFilter();
+        OpB_test3.getBackground().clearColorFilter();
+        OpC_test3.getBackground().clearColorFilter();
+        OpD_test3.getBackground().clearColorFilter();
+        OpE_test3.getBackground().clearColorFilter();
 
         if(currentQuestionIndex_test3 == totalQuestion_test3){
             relativeLayout_test2.setVisibility(View.GONE);

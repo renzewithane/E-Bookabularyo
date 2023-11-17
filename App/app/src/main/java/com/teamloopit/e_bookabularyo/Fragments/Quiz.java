@@ -13,8 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.teamloopit.e_bookabularyo.Activity.Mabangis;
-import com.teamloopit.e_bookabularyo.Activity.MabangisQA;
-import com.teamloopit.e_bookabularyo.Activity.QuizActivity;
+import com.teamloopit.e_bookabularyo.Activity.Sarrangola;
 import com.teamloopit.e_bookabularyo.KwentoAdapter;
 import com.teamloopit.e_bookabularyo.KwentoModel;
 import com.teamloopit.e_bookabularyo.R;
@@ -54,15 +53,16 @@ public class Quiz extends Fragment {
 
                 Toast.makeText(getContext(), "This is "+ kwentoModel.getKwentoTitle() + " Quiz ", Toast.LENGTH_SHORT).show();
 
-                if (kwentoModel.getKwentoTitle()=="Sarranggola"){
-                    Intent intent = new Intent(getContext(), QuizActivity.class);
+                if (kwentoModel.getKwentoTitle().equals("Sarranggola")){
+                    Intent intent = new Intent(getContext(), Sarrangola.class);
 
                     intent.putExtra("storyTitleData", kwentoModel.getKwentoTitle());
 
                     startActivity(intent);
                     Toast.makeText(getContext(), "This is "+ kwentoModel.getKwentoTitle() + " Quiz ", Toast.LENGTH_SHORT).show();
                 }
-                else {
+                else if (kwentoModel.getKwentoTitle().equals("Mabangis Na Lungsod"))
+                {
                     Intent intent = new Intent(getContext(), Mabangis.class);
 
                     intent.putExtra("storyTitleData", kwentoModel.getKwentoTitle());

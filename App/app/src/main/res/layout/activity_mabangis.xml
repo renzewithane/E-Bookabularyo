@@ -4,10 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_200"
+    android:background="@drawable/fragment_bg"
     tools:context=".Activity.Mabangis">
 
+  <RelativeLayout
+      android:id="@+id/openingStatementLayout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
 
+      >
+
+    <TextView
+        android:id="@+id/quizKwentoTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TITLE_TITLE"
+
+        android:textColor="@color/black"
+        android:fontFamily="@font/dongle_bold"
+        android:textSize="@dimen/text_verybig"
+        android:gravity="center"
+
+        android:layout_margin="@dimen/insane"
+
+        >
+
+    </TextView>
+    <ImageView
+        android:id="@+id/imageQuizTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/quiz_time"
+        android:layout_centerInParent="true"
+        >
+
+    </ImageView>
+
+    <Button
+        android:id="@+id/startQuizAnswerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner_shape"
+        android:backgroundTint="@color/blue"
+        android:text="@string/answertag"
+        android:textColor="@color/white"
+        android:fontFamily="@font/dongle_bold"
+        android:textSize="@dimen/text_header"
+
+        android:layout_margin="@dimen/insane"
+
+        android:layout_below="@+id/imageQuizTime"
+        >
+    </Button>
+  </RelativeLayout>
 
   <RelativeLayout
       android:id="@+id/test1"
@@ -21,54 +70,62 @@
         android:id="@+id/Q1_questions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="239dp"
-        android:layout_marginEnd="-1dp"
+        android:layout_marginStart="@dimen/insane"
+        android:layout_marginEnd="@dimen/insane"
+        android:layout_marginTop="250dp"
+
+        android:background="@drawable/rounded_corner_shape"
+        android:backgroundTint="@color/lightorange"
+
         android:text="Questions"
         android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="24dp"
-        android:textStyle="bold" />
+
+        android:textColor="@color/grayish"
+        android:textSize="@dimen/text_header"
+        android:fontFamily="@font/dongle_bold"
+        android:lineHeight="@dimen/mid"
+        android:padding="5dp"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Q1_questions"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="384dp"
+
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
 
       <Button
+          android:lineHeight="@dimen/mid"
           android:id="@+id/Q1_A"
-          android:layout_width="wrap_content"
+          android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_gravity="center"
-          android:layout_marginStart="5dp"
-          android:layout_marginTop="5dp"
-          android:layout_marginEnd="5dp"
-          android:layout_marginBottom="5dp"
-          android:backgroundTint="@color/white"
+          android:layout_margin="@dimen/low"
+          android:backgroundTint="@color/dwhite"
           android:text="A"
-          android:textColor="@color/black" />
+          android:textColor="@color/grayish"
+          android:textSize="@dimen/text_somwhatbig"
+          android:fontFamily="@font/dongle_bold"/>
 
       <Button
+
           android:id="@+id/Q1_B"
-          android:layout_width="wrap_content"
+          android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_gravity="center"
-          android:layout_marginStart="5dp"
-          android:layout_marginTop="5dp"
-          android:layout_marginEnd="5dp"
-          android:layout_marginBottom="5dp"
-          android:backgroundTint="@color/white"
+          android:layout_margin="@dimen/low"
+          android:backgroundTint="@color/dwhite"
           android:text="B"
-          android:textColor="@color/black" />
+          android:textColor="@color/grayish"
+          android:textSize="@dimen/text_somwhatbig"
+          android:fontFamily="@font/dongle_bold"
+
+          android:lineHeight="@dimen/mid"
+
+
+          />
 
     </LinearLayout>
 
@@ -77,83 +134,99 @@
 
   <RelativeLayout
       android:id="@+id/test2"
-      android:visibility="gone"
+
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:layout_centerInParent="true"
       android:orientation="vertical"
+      android:visibility="gone"
       >
 
     <TextView
         android:id="@+id/Q2_questions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="228dp"
-        android:layout_marginEnd="-1dp"
-        android:paddingLeft="30px"
-        android:paddingRight="30px"
+
+        android:background="@drawable/rounded_corner_shape"
+        android:backgroundTint="@color/lightorange"
+        android:layout_marginStart="@dimen/insane"
+        android:layout_marginEnd="@dimen/insane"
+        android:layout_marginTop="250dp"
+
+
+
+        android:paddingLeft="@dimen/high"
+        android:paddingRight="@dimen/high"
         android:text=""
+
         android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="24dp"
-        android:textStyle="bold" />
+        android:textColor="@color/grayish"
+        android:textSize="@dimen/text_header"
+        android:fontFamily="@font/dongle_bold"
+        android:lineHeight="@dimen/mid"
+
+
+        />
 
     <LinearLayout
-        android:layout_width="414dp"
-        android:layout_height="191dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/Q2_questions"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="-3dp"
-        android:layout_marginBottom="170dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
 
 
       <Button
           android:id="@+id/Q2_A"
-          android:layout_width="wrap_content"
+          android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_gravity="center"
-          android:layout_marginStart="5dp"
-          android:layout_marginTop="5dp"
-          android:layout_marginEnd="5dp"
-          android:layout_marginBottom="5dp"
-          android:backgroundTint="@color/white"
+
+
           android:text="A"
-          android:textColor="@color/black" />
+
+          android:layout_margin="@dimen/low"
+          android:backgroundTint="@color/dwhite"
+
+          android:textColor="@color/grayish"
+          android:textSize="@dimen/text_somwhatbig"
+          android:fontFamily="@font/dongle_bold"
+
+          android:lineHeight="@dimen/mid"
+          />
 
       <Button
           android:id="@+id/Q2_B"
-          android:layout_width="wrap_content"
+          android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_gravity="center"
-          android:layout_marginStart="5dp"
-          android:layout_marginTop="5dp"
-          android:layout_marginEnd="5dp"
-          android:layout_marginBottom="5dp"
-          android:backgroundTint="@color/white"
+
           android:text="B"
-          android:textColor="@color/black" />
+
+          android:layout_margin="@dimen/low"
+          android:backgroundTint="@color/dwhite"
+
+          android:textColor="@color/grayish"
+          android:textSize="@dimen/text_somwhatbig"
+          android:fontFamily="@font/dongle_bold"
+
+          android:lineHeight="@dimen/mid" />
 
       <Button
           android:id="@+id/Q2_C"
-          android:layout_width="wrap_content"
+          android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:layout_marginStart="5dp"
-          android:layout_marginTop="5dp"
-          android:layout_marginEnd="5dp"
-          android:layout_marginBottom="5dp"
-          android:backgroundTint="@color/white"
+
           android:text="B"
-          android:textColor="@color/black" />
+          android:layout_margin="@dimen/low"
+          android:backgroundTint="@color/dwhite"
+
+          android:textColor="@color/grayish"
+          android:textSize="@dimen/text_somwhatbig"
+          android:fontFamily="@font/dongle_bold"
+
+          android:lineHeight="@dimen/mid"
+          />
 
     </LinearLayout>
 
@@ -166,21 +239,38 @@
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:orientation="vertical"
+
       >
 
 
     <LinearLayout
-        android:layout_width="414dp"
-        android:layout_height="191dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="-2dp"
-        android:layout_marginTop="54dp"
-        android:layout_marginEnd="-1dp"
-        android:layout_marginBottom="294dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:gravity="center"
         android:orientation="vertical">
+
+      <TextView
+
+          android:id="@+id/Q3_questions"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Question"
+          android:textAlignment="center"
+
+
+          android:textColor="@color/grayish"
+          android:textSize="@dimen/text_header"
+          android:fontFamily="@font/dongle_bold"
+
+          android:background="@drawable/rounded_corner_shape"
+          android:backgroundTint="@color/lightorange"
+          android:layout_marginStart="@dimen/insane"
+          android:layout_marginEnd="@dimen/insane"
+
+
+          android:lineHeight="@dimen/mid"
+          />
 
       <LinearLayout
           android:layout_width="wrap_content"
@@ -197,7 +287,12 @@
             android:layout_marginBottom="5dp"
             android:backgroundTint="@color/white"
             android:text="A"
-            android:textColor="@color/black" />
+
+
+            android:textColor="@color/grayish"
+            android:textSize="@dimen/text_hard"
+            android:fontFamily="@font/dongle_bold"
+            />
 
         <Button
             android:id="@+id/Q3_B"
@@ -210,7 +305,12 @@
             android:layout_marginBottom="5dp"
             android:backgroundTint="@color/white"
             android:text="B"
-            android:textColor="@color/black" />
+
+
+            android:textColor="@color/grayish"
+            android:textSize="@dimen/text_hard"
+            android:fontFamily="@font/dongle_bold"
+            />
 
         <Button
             android:id="@+id/Q3_C"
@@ -223,7 +323,11 @@
             android:layout_marginBottom="5dp"
             android:backgroundTint="@color/white"
             android:text="B"
-            android:textColor="@color/black" />
+
+            android:textColor="@color/grayish"
+            android:textSize="@dimen/text_hard"
+            android:fontFamily="@font/dongle_bold"
+            />
       </LinearLayout>
 
       <LinearLayout
@@ -241,7 +345,10 @@
             android:layout_marginBottom="5dp"
             android:backgroundTint="@color/white"
             android:text="A"
-            android:textColor="@color/black" />
+
+            android:textColor="@color/grayish"
+            android:textSize="@dimen/text_hard"
+            android:fontFamily="@font/dongle_bold"/>
 
         <Button
             android:id="@+id/Q3_E"
@@ -254,20 +361,16 @@
             android:layout_marginBottom="5dp"
             android:backgroundTint="@color/white"
             android:text="B"
-            android:textColor="@color/black" />
+
+            android:textColor="@color/grayish"
+            android:textSize="@dimen/text_hard"
+            android:fontFamily="@font/dongle_bold"
+            />
 
 
 
       </LinearLayout>
-      <TextView
-          android:id="@+id/Q3_questions"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:text="Question"
-          android:textAlignment="center"
-          android:textColor="@color/white"
-          android:textSize="24dp"
-          android:textStyle="bold" />
+
 
 
 
@@ -279,28 +382,38 @@
 
   <LinearLayout
       android:id="@+id/Panuto"
-      android:layout_width="303dp"
-      android:layout_height="165dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
       android:layout_centerInParent="true"
-      android:background="@drawable/bachsd"
+      android:background="@drawable/rounded_corner_bg"
       android:orientation="vertical"
-      android:visibility="gone">
+      android:layout_margin="@dimen/insane"
+      android:visibility="gone"
+      >
 
     <TextView
         android:id="@+id/Panuto_tes2"
-        android:layout_width="wrap_content"
-        android:layout_height="106dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Panuto"
-        android:textColor="@color/white"
-        android:textSize="15dp" />
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_somwhatbig"
+        android:fontFamily="@font/dongle_bold"
+        />
 
     <Button
         android:id="@+id/agree_test"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="CONTINUE" />
+        android:text="PROCEED"
+
+        android:textSize="@dimen/text_header2"
+        android:textColor="@color/white"
+        android:fontFamily="@font/dongle_bold"
+        android:backgroundTint="@color/red"
+        android:background="@drawable/rounded_corner_shape" />
 
 
   </LinearLayout>
@@ -313,7 +426,7 @@
       android:layout_alignParentTop="true"
       android:layout_centerInParent="true"
       android:layout_marginTop="180dp"
-      android:background="@drawable/bachsd"
+      android:background="@drawable/rounded_corner_bg"
       android:visibility="gone">
 
     <TextView
