@@ -67,6 +67,7 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
     private TextView quizTitle;
     private String quizTitleStr;
     private RelativeLayout openingStatementLayout;
+    private long time = 100;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -218,7 +219,7 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
                     loadQuestion_tes1();
 
                 }
-            },2000);
+            },time);
         }
 
         else if (relativeLayout_test1.getVisibility() == View.GONE && relativeLayout_test2.getVisibility() == View.VISIBLE) {
@@ -254,7 +255,7 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
                     loadQuestion_tes2();
 
                 }
-            },2000);
+            },time);
         }
         else if (relativeLayout_test1.getVisibility() == View.GONE && relativeLayout_test2.getVisibility() == View.GONE
                 && relativeLayout_test3.getVisibility() == View.VISIBLE) {
@@ -291,7 +292,7 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
                     loadQuestion_tes3();
 
                 }
-            },2000);
+            },time);
         }
 
 
@@ -391,6 +392,11 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
         OpE_test3.setBackgroundColor(Color.WHITE);
 
 
+        OpA_test3.getBackground().clearColorFilter();
+        OpB_test3.getBackground().clearColorFilter();
+        OpC_test3.getBackground().clearColorFilter();
+        OpD_test3.getBackground().clearColorFilter();
+        OpE_test3.getBackground().clearColorFilter();
 
         if(currentQuestionIndex_test3 == totalQuestion_test3){
             relativeLayout_test2.setVisibility(View.GONE);

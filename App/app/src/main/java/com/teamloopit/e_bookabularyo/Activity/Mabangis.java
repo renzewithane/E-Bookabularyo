@@ -70,6 +70,8 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
     private TextView quizTitle;
     private String quizTitleStr;
     private RelativeLayout openingStatementLayout;
+
+    private long time = 100;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -221,7 +223,7 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
                     loadQuestion_tes1();
 
                 }
-            },2000);
+            },time);
         }
 
         else if (relativeLayout_test1.getVisibility() == View.GONE && relativeLayout_test2.getVisibility() == View.VISIBLE) {
@@ -255,7 +257,7 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
                     loadQuestion_tes2();
 
                 }
-            },2000);
+            },time);
         }
         else if (relativeLayout_test1.getVisibility() == View.GONE && relativeLayout_test2.getVisibility() == View.GONE
                 && relativeLayout_test3.getVisibility() == View.VISIBLE) {
@@ -292,7 +294,7 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
                     loadQuestion_tes3();
 
                 }
-            },2000);
+            },time);
         }
 
 
@@ -445,9 +447,9 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
         }
 
 
-        score1.setText(score_test1_value + "/" + totalQuestion + "\t \t" + passStatus_test1);
-        score2.setText(score_test2_value + "/" + totalQuestion_test2 + "\t \t" + passStatus_test2);
-        score3.setText(score_test3_value + "/" + totalQuestion_test3 + "\t \t" + passStatus_test3);
+        score1.setText(score_test1_value + "/" + totalQuestion + " " + passStatus_test1);
+        score2.setText(score_test2_value + "/" + totalQuestion_test2 + " " + passStatus_test2);
+        score3.setText(score_test3_value + "/" + totalQuestion_test3 + " " + passStatus_test3);
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
