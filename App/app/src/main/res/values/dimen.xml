@@ -15,4 +15,5 @@
     <dimen name="text_header">36sp</dimen>
     <dimen name="text_header2">32sp</dimen>
     <dimen name="text_somwhatbig">26sp</dimen>
+    <dimen name="text_hmm">24sp</dimen>
 </resources>

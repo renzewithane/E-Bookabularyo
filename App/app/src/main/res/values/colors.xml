@@ -15,6 +15,7 @@
 
     <color name="blue">#779ECB</color>
     <color name="grayish">#3A3A3A</color>
+    <color name="dropblack">#DADADA</color>
 
     <color name="green">#0DC100</color>
 </resources>

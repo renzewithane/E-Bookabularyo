@@ -3,6 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.Settings">
+    tools:context=".Fragments.Settings"
+    android:layout_margin="@dimen/mid">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+
+            android:fontFamily="@font/dongle_bold"
+            android:textSize="@dimen/text_verybig"
+
+            android:textColor="@color/black"
+            >
+
+
+        </TextView>
+    </RelativeLayout>
 </FrameLayout>

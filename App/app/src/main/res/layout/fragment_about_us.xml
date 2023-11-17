@@ -3,8 +3,130 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.AboutUs">
+    tools:context=".Fragments.AboutUs"
+    android:layout_margin="@dimen/mid"
+    >
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About Us"
+
+            android:fontFamily="@font/dongle_bold"
+            android:textSize="@dimen/text_verybig"
+
+            android:textColor="@color/black"
+            >
+
+
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:background="@drawable/rounded_corner_shape"
+            android:backgroundTint="@color/dropblack"
+            android:orientation="horizontal"
+            android:padding="@dimen/low"
+            >
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+
+                app:cardCornerRadius="16dp"
+                app:cardElevation="12dp"
+                android:layout_margin="@dimen/low"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/book_pic_one"
+                    >
+                </ImageView>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bernadeth M. Del Barrio"
+
+                android:fontFamily="@font/dongle_bold"
+                android:textSize="@dimen/text_hmm"
+
+                android:lineHeight="@dimen/high"
+
+                android:textColor="@color/black"
+                android:layout_margin="@dimen/low"
+                >
+
+
+            </TextView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/l1"
+            android:background="@drawable/rounded_corner_shape"
+            android:backgroundTint="@color/dropblack"
+            android:orientation="horizontal"
+            android:padding="@dimen/low"
+
+            android:layout_marginTop="@dimen/veryhigh"
+            >
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+
+                app:cardCornerRadius="16dp"
+                app:cardElevation="12dp"
+                android:layout_margin="@dimen/low"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/book_pic_two"
+                    >
+                </ImageView>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bernadette R. Odiaz"
+
+                android:fontFamily="@font/dongle_bold"
+                android:textSize="@dimen/text_hmm"
+
+                android:lineHeight="@dimen/high"
+
+                android:textColor="@color/black"
+                android:layout_margin="@dimen/low"
+                >
+
+
+            </TextView>
+        </LinearLayout>
+
+    </RelativeLayout>
 
 
 </FrameLayout>
