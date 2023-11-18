@@ -22,12 +22,11 @@
         android:fontFamily="@font/dongle_bold"
 
         android:textSize="@dimen/text_header"
-        android:textColor="@color/white"
+        android:textColor="#FFFFFF"
 
         android:layout_above="@+id/inputLayout"
-
-        android:layout_marginStart="@dimen/veryhigh"
-        android:layout_marginEnd="@dimen/veryhigh"
+        android:background="#AD000000"
+    android:gravity="center"
         android:shadowColor="#000000"
         android:shadowDx="2"
         android:shadowDy="2"
@@ -62,7 +61,7 @@
 
 
             android:background="@drawable/rounded_corner_shape_edittext_box"
-            android:backgroundTint="#9F000000"
+
             android:padding="@dimen/mid"
             >
 

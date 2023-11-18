@@ -69,9 +69,9 @@ public class Home extends Fragment {
     private List<KwentoModel> KwentoPopulator()
     {
         List<KwentoModel> list = new ArrayList<>();
-        list.add(new KwentoModel(R.drawable.book_pic_one, "Sarranggola"));
+        list.add(new KwentoModel(R.drawable.book_pic_one, "Saranggola"));
         list.add(new KwentoModel(R.drawable.book_pic_two, "Mabangis Na Lungsod"));
-        list.add(new KwentoModel(R.drawable.watdahill, "What the Duck is this"));
+
 
         return list;
     }

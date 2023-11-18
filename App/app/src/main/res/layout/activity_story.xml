@@ -1,9 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Activity.StoryActivity">
+    android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/imageViewBG"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:scaleType="centerCrop"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rounded_corner_shape2"
+        android:backgroundTint="@color/white"
+        android:orientation="vertical"
+
+        android:padding="@dimen/low"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Book Detail"
+            android:gravity="center"
+            android:fontFamily="@font/dongle_bold"
+
+            android:textSize="@dimen/text_somwhatbig"
+
+            >
+        </TextView>
+
+        <TextView
+            android:id="@+id/bookTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="bookTitle"
+            android:gravity="left"
+            android:fontFamily="@font/dongle_bold"
+
+            android:textSize="@dimen/text_header2"
+            android:textColor="@color/black"
+            >
+        </TextView>
+
+        <TextView
+            android:id="@+id/bookAuthor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="bookAuthor"
+
+            android:fontFamily="@font/dongle_bold"
+            android:gravity="left"
+            android:textSize="@dimen/text_hard"
+            android:layout_marginTop="-10dp"
+            >
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            >
+
+            <Button
+                android:id="@+id/watchTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_shape"
+                android:backgroundTint="@color/red"
+                android:layout_weight="0.5"
+                android:layout_margin="@dimen/high"
+
+                android:text="Watch"
+                android:fontFamily="@font/dongle_bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_header2"
+
+                >
+            </Button>
+
+            <Button
+                android:id="@+id/readTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_shape"
+                android:backgroundTint="@color/red"
+                android:layout_weight="0.5"
+                android:layout_margin="@dimen/high"
+
+                android:text="Read Book"
+                android:fontFamily="@font/dongle_bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_header2"
+
+                >
+            </Button>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
