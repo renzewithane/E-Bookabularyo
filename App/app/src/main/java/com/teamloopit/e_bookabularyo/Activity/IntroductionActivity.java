@@ -45,6 +45,9 @@ public class IntroductionActivity extends AppCompatActivity {
                 if(clickIndex == 2)
                 {
                     startActivity(new Intent(IntroductionActivity.this, MainActivity.class));
+
+
+
                     finish();
                 }
             }

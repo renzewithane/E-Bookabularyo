@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.content.Intent;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -24,12 +25,17 @@ public class StoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         InitializeActivity();
 
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+
         setContentView(R.layout.activity_story);
 
         title = findViewById(R.id.bookTitle);
         author = findViewById(R.id.bookAuthor);
 
+
+
         read = findViewById(R.id.readTitle);
+
         watch = findViewById(R.id.watchTitle);
         bg = findViewById(R.id.imageViewBG);
 
@@ -42,12 +48,25 @@ public class StoryActivity extends AppCompatActivity {
                 MabangisCreated();
                 break;
         }
+
+        read.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(StoryActivity.this, FlipActivity.class);
+
+                intent.putExtra("storyTitleData", storyToShow);
+
+                startActivity(intent);
+            }
+        });
+
     }
     public void SaraggolaCreated()
     {
         title.setText("Saranggola");
         author.setText("Isunulat ni Efren R. Abueg");
         bg.setImageResource(R.drawable.book_pic_one);
+
 
     }
 
@@ -56,6 +75,7 @@ public class StoryActivity extends AppCompatActivity {
         title.setText("Mabangis na Lunsod");
         author.setText("Isunulat ni Efren R. Abueg");
         bg.setImageResource(R.drawable.book_pic_two);
+
 
     }
 
