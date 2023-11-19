@@ -54,7 +54,6 @@ public class FlipFragment extends Fragment {
         String a = getArguments().getString(author);
         textViewauthor.setText(a);
 
-        // Set text and image
         textViewbody.setText(textResourceId);
         view.setBackgroundResource(imageResourceId);
 

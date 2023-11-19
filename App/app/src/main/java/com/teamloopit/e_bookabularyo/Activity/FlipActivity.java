@@ -30,8 +30,10 @@ public class FlipActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewPager);
 
 
+        // Determine the story to show in the flip
         switch (storyToShow)
         {
+            // if saranggola is the value of the storyToShow, run the method SaraggolaCreated(), vice versa to mabangis
             case "Saranggola":
                 SaraggolaCreated();
                 break;
@@ -43,8 +45,11 @@ public class FlipActivity extends AppCompatActivity {
     }
     public void SaraggolaCreated()
     {
+        // declare list int of the arguments to be passed in the fragment
+        // arguments is consist of the string resource
         List<Integer> arguments = new ArrayList<>();
 
+        // add the string resoucrs for each swipeable page of the flip fragment
         arguments.add(R.string.saranggola1);
         arguments.add(R.string.saranggola2);
         arguments.add(R.string.saranggola3);
@@ -57,7 +62,9 @@ public class FlipActivity extends AppCompatActivity {
         arguments.add(R.string.saranggola10);
         arguments.add(R.string.saranggola11);
 
+        // create a FlipAdapter with the arguments, background image, title, and author
         FlipAdapter pagerAdapter = new FlipAdapter(getSupportFragmentManager(), arguments, R.drawable.sarang_bg_flip, "Saranggola", "Ni Efren R. Abueg");
+        // set the pager
         viewPager.setAdapter(pagerAdapter);
     }
 
