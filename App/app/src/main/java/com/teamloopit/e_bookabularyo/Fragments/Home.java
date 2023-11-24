@@ -1,6 +1,9 @@
 package com.teamloopit.e_bookabularyo.Fragments;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,6 +13,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,18 +27,68 @@ import com.teamloopit.e_bookabularyo.Utilities;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+
 import com.teamloopit.e_bookabularyo.KwentoAdapter.OnItemClickListener;
 public class Home extends Fragment {
 
     private TextView txtView_UserName;
-    public Home() {}
 
+    private SharedPreferences mPreferences;
+
+    private String sharedPrefFile = "com.teamloopit.e_bookabularyo";
+
+
+    private String pogressBookTitle;
+    private int progressCurrentPosition;
+    private int totalFrag;
+    ImageView bg;
+    private ProgressBar pBar;
+
+    private TextView t;
+    public Home() {}
+    public LinearLayout ipagpatuloy1, ipagpatuloy2;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         Initialize(view);
+
+
+        mPreferences = getContext().getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
+        pogressBookTitle = mPreferences.getString("currentTitle", "");
+        progressCurrentPosition = mPreferences.getInt("currentPage", 0);
+        totalFrag = mPreferences.getInt("currentTotalFragment", 0);
+
+        t = view.findViewById(R.id.progressBookTitle);
+        pBar = view.findViewById(R.id.progressBarProgress);
+
+        t.setText(pogressBookTitle);
+        pBar.setMax(totalFrag);
+        pBar.setProgress(progressCurrentPosition);
+
+        bg = view.findViewById(R.id.kwentoBgProgress);
+
+
+        ipagpatuloy1 = view.findViewById(R.id.main);
+        ipagpatuloy2 = view.findViewById(R.id.ituloyKwentoLayout);
+
+        if ("Saranggola".equals(t.getText())) {
+            ipagpatuloy1.setVisibility(View.VISIBLE);
+            ipagpatuloy2.setVisibility(View.VISIBLE);
+
+
+            bg.setImageResource(R.drawable.book_pic_one);
+        } else if ("Mabangis Na Lungsod".equals(t.getText())) {
+            bg.setImageResource(R.drawable.book_pic_two);
+            ipagpatuloy1.setVisibility(View.VISIBLE);
+            ipagpatuloy2.setVisibility(View.VISIBLE);
+
+        } else {
+            ipagpatuloy1.setVisibility(View.INVISIBLE);
+            ipagpatuloy2.setVisibility(View.INVISIBLE);
+        }
 
         // Recyclerview for the list view of the kwentos
         RecyclerView kwentoRecyclerView = view.findViewById(R.id.kwentoRecyclerView);
@@ -58,6 +114,7 @@ public class Home extends Fragment {
                 startActivity(intent);
 
                 Toast.makeText(getContext(), "This is "+kwentoModel.getKwentoTitle(), Toast.LENGTH_SHORT).show();
+                getActivity().finish();
             }
         });
 

@@ -12,18 +12,18 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hear_a_story">Hear a story</string>
-    <string name="select_quizzes">Select Quizzes</string>
+    <string name="select_quizzes">PUMILI NG PAGSUSULIT</string>
 
 
-    <string name="Panuto1_kite"><b>Part 1</b> \nMultiple choice \nPanuto: \nPiliin at pindutin ang tamang sagot</string>
-    <string name="Panuto2_kite"><b>Part 2</b> \nMultiple choice \nPanuto: \nTukuyin ang kasingkahulugan ng mga salitang may salungguhit na halaw sa
+    <string name="Panuto1_kite"><b>IKAUNANG BAHAGI</b> \nMARAMING PAMIMILIAN \nPanuto: \nPiliin at pindutin ang tamang sagot</string>
+    <string name="Panuto2_kite"><b>IKALAWANG BAHAGI</b> \nMARAMING PAMIMILIAN \nPanuto: \nTukuyin ang kasingkahulugan ng mga salitang may salungguhit na halaw sa
                             kuwentong Ang Saranggola</string>
-    <string name="Panuto3_kite"><b>Part 3</b> \nMultiple choice \nPanuto: \nPiliin at pindutin ang tamang sagot</string>
+    <string name="Panuto3_kite"><b>IKATLOLONG BAHAGI</b> \nPAGTUTUGMA \nPanuto: \nPiliin at pindutin ang tamang sagot</string>
 
-    <string name="Panuto1"><b>Part 1</b> \nMultiple choice \nPanuto: \nPiliin at pindutin ang tamang sagot</string>
-    <string name="Panuto2"><b>Part 2</b> \nMultiple choice \nPanuto: \nTukuyin ang kasingkahulugan ng mga salitang may salungguhit na halaw sa
+    <string name="Panuto1"><b>IKAUNANG BAHAGI</b> \nMARAMING PAMIMILIAN \nPanuto: \nPiliin at pindutin ang tamang sagot</string>
+    <string name="Panuto2"><b>IKALAWANG BAHAGI</b> \nMARAMING PAMIMILIAN \nPanuto: \nTukuyin ang kasingkahulugan ng mga salitang may salungguhit na halaw sa
                             kuwentong Mabangis na Lungsod ni Efren Abueg.</string>
-    <string name="Panuto3"><b>Part 3</b> \nMatching Type \nPanuto: \nTukuyin ang kasingkahulugan ng salita </string>
+    <string name="Panuto3"><b>IKATLOLONG BAHAGI</b> \nPAGTUTUGMA \nPanuto: \nTukuyin ang kasingkahulugan ng salita </string>
     <string name="Q1_test2">1. Ang gabi ay mabilis na  <u>lumagom</u> sa malalaki’t maliliit na lansangan</string>
     <string name="Q2_test2">2. Dumantay sa mukha ng mga taong araw-araw na may bagong <u>lunas</u>  na walang bisa.</string>
     <string name="Q3_test2">3. <u>Mabangis na liwanag</u>  ng ilaw-dagitab.</string>
@@ -34,13 +34,13 @@
     <string name="Q8_test2">8. Ang mga tao ay <u>naghihikahos</u>  din.</string>
     <string name="Q9_test2">9. Nandidiring mapadikit sa <u>marurusing</u>  palad na wari bang mga kamay ay manipis.</string>
     <string name="Q10_test2">10. Ang nakikita niya ay irap, pandidiri, at <u>pagkasuklam</u> .</string>
-    <string name="answertag">ANSWER</string>
+    <string name="answertag">SAGUTAN</string>
 
 
     <string name="saranggola1">
         \n
         Rading, Paquito, Nelson… pakinggan ninyo ang kwentong ito. May isang lalaki, walong taong
-        gulang. Humiling siya sa kanyang ama ng isang guryon.\n
+        gulang. Humiling siya sa kanyang ama ng isang guryon.
         “Anak, ibibili kita ng kawayan at papel. Gumawa ka na lamang ng saranggola,” wika ng ama.\n
         “Hindi ako marunong, Tatay,” anang batang lalaki.\n
         “Madali ‘yan. Tuturuan kita,” sabi ng ama at tinapik sa balikat ang anak.\n
@@ -51,7 +51,7 @@
         Nainis ang bata sa kanyang ama.\n
         “Kinakantyawan ako sa bukid, Tatay,” anang bata. “Anak daw ako ng may-ari ng kaisa-isang
         istasyon ng gasolina sa bayan… bakit daw kay liit ng saranggola ko!”
-        Nagtawa ang ama at tinapik na naman sa balikat ang anak.\n
+        Nagtawa ang ama at tinapik na naman sa balikat ang anak.
     </string>
     <string name="saranggola2">
         \n
@@ -230,5 +230,144 @@
         tuturuan kita!” paliwanag na ama.\n
          Rading, Paquito, Nelson…tandaan ninyo ang kwentong iyan. Kwento ‘yan namin ng inyong
         namatay na lolo. Kwento naming dalawa.\n
+    </string>
+
+
+    <string name="mabangis1">
+        \n
+        Ang gabi ay mabilis na lumatag sa mga gusali, lumagom sa malalaki’t maliliit na lansangan,
+        dumantay sa mukha ng mga taong pagal, sa mga taong araw-araw ay may bagong lunas na
+        walang bisa. Ngunit ang gabi ay waring manipis na sutla lamang ng
+        dilim na walang lawak mula sa lupa hanggang sa mga unang palapag ng mga gusali. Ang gabi
+        sa kalupaan ay ukol lamang sa dilim sa kalangitan sapagkat ang gabi sa kalupaan ay hinahamig
+        lamang ng mabangis na liwanag ng mga ilaw-dagitab.
+        \n
+        Ang gabi ay hindi napapansin ng lalabindalawahing taong gulang na si Adong. Ang gabi ay tulad
+        lamang ng pagiging Quiapo ng pook na iyon. Kay Adong, ang gabi’y naroroon, hindi dahil sa may
+        layunin sa pagiging naroroon, kundi dahil sa naroroon
+        katulad ng Quiapo. Sa walang muwang na isipan ni Adong, walang kabuluhan sa kaniya kung
+        naroon man o wala ang gabi- at ang Quiapo.
+    </string>
+
+    <string name="mabangis2">
+        \n
+        Ngunit isang bagay ang may kabuluhan kay Adong sa Quiapo. Alisin na ang nagtatayugang gusali
+        roon, alisin na ang bagong lagusan sa ilalim ng lupa, alisin na ang mga tindahang hanggang sa
+        mga huling oras ng gabi’y mailaw at mabawasan ang mga
+        taong pumapasok at lumalabas doon, dahil sa isang bagay na hinahanap sa isang marikit na
+        altar. Sapagkat ang simbahan ay buhay ni Adong.
+
+        \n
+        Kung ilang hanay ang mga pulubing naroroon at mga nagtitinda ng tiket ng suwipistek, ng kandila,
+        ng kung anu-anong ugat ng punongkahoy at halaman. At sa mga hanay na iyon ay nakatunghay
+        ang simbahan, naawa, nahahabag. At nakatingala naman
+        ang mga hanay na iyon, kabilang si Adong. Hindi sa simbahan kundi sa mga taong may puso pa
+        upang dumukot sa bulsa at maglapag ng konting barya sa maruruming palad. Mapapaiyak na si
+        Adong. Ang tingin niya tuloy sa mga ilaw-dagitab ay parang
+        mga piraso ng apoy na ikinakalat sa kalawakan. Kangina pa siyang tanghali sa loob ng marusing
+        na bakuran ng simbahan, nagsawa na ang kaniyang mga bisig sa wala pang tunog ng katuwaan.
+        Bagkus ang naroon ay bahaw na tunog ng babala. Babalang
+        ipinararamdam ng pangangalam ng kaniyang sikmura at sinasapian pa ng takot na waring higad
+        na gumagapang sa kaniyang katawan.
+    </string>
+    <string name="mabangis3">
+        \n
+        “Mama… Ale, palimos na po.”\n
+        Ang maraming mukhang nagdaraan ay malalamig na parang bato, ang imbay ng mga kamay at
+        hiwatig ng pagwawalang-bahala, ang hakbang ay napapahalaga ng pagmamadali ng pag-iwas.
+        “Palimos na po, ale… hindi pa po ako nanananghali!” Kung may pumapansin man sa panawagan
+        ni Adong, ang nakikita niya ay irap,\n
+        pandidiri, pagkasuklam. “Pinaghahanapbuhay ‘yan ng mga magulang para maisugal,” madalas
+        naririnig ni Adong. Nasasaktan siya, sapagkat ang bahagi ng pangungusap na iyon ay untag sa
+        kaniya ni Aling Ebeng, ang matandang pilay na kaniyang katabi sa
+        dakong liwasan ng simbahan.\n
+        At halos araw-araw, lagi siyang napapaiyak, hindi lamang niya ipinahahalata kay Aling Ebeng, ni
+        kanino man sa naroroong nagpapalimos. Alam niyang hindi maiiwasan ang paghindi sa kaniya
+        ng limang piso, sa lahat. Walang bawas.
+    </string>
+
+    <string name="mabangis4">
+        \n
+        “May reklamo?” ang nakasisindak na tinig ni Bruno. Ang mga mata nito’y nanlilisik kapag
+        nagpatumpik-tumpik siya sa pagbibigay.\n
+        At ang mga kamay ni Adong ay manginginig pa habang inilaladay niya sa masakim na palad ni
+        Bruno ang salapi, mga baryang matagal ding kumalansing sa kaniyang bulsa, ngunit kailan man
+        ay hidni nakarating sa kaniyang bituka.\n
+        “Maawa na po kayo, Mama.. Ale.. gutom na gutom na ako!”\n
+        Ang mga daing ay walang halaga, waring mga patak ng ulan sa malalaking bitak ng lupa. Ang
+        mga tao’y naghihikahos na rin. Ang panahon ay patuloy na ibinuburol ng karukhaan.
+        Ang kampana ay tumutugtog at sa loob ng simbahan, pagkaraan ng maikling sandali, narinig ni
+        Adong ang pagkilos ng mga taong papalabas, waring nagmamadali na tila ba sa wala pang isang
+        oras na pagkakatigil sa simbahan ay napapaso, nakararamdam ng hapdi, hindi sa katawan, kundi
+        sa kaluluwa. Natuwa si Adong. Pinagbuti niya ang paglalahad ng kaniyang palad at pagtawag sa
+        mga taong papalapit sa mga taong sa kaniyang kinaroroonan.
+
+    </string>
+    <string name="mabangis5">
+        \n
+        “Malapit nang dumating si Bruno…” ani Aling Ebeng na walang sino mang pinatutungkulan.
+        Manapa’y para sa lahat na maaring makarinig.\n
+        Biglang-bigla, napawi ang katuwaan ni Adong. Nilagom ng kaniyang bituka ang nararamdamang
+        gutom. Ang pangambang sumisigid na kilabot sa kaniyang mga laman at nagpapantindig sa
+        kaniyang mga balahibo ay waring dinaklot at itinapon sa malayo ng isang mahiwagang kamay.
+        Habang nagdaraan sa kaniyang harap ang mga taon malamig, walang awa, walang pakiramdamnakadarama siya ng kung anong bagay na apoy sa kaniyang kalooban. Aywan niya kung bakit
+        gayon ang nararamdaman niya matapos mapawi ang kaniyang gutom at pangamba. Kung ilang
+        araw na niyang nadarama iyon, at hanggang sa ngayon ay naroroon pa’t waring umuuntag sa
+        kaniya na gumawa ng isang marahas na bagay.
+        Ilang barya ang nalaglag sa kaniyang palad, hindi inilagay kung inilaglag, sapagkat ang mga
+        palad na nagbibigay ay nandidiring mapadikit sa marurusing na palad na wari bang mga kamay
+        lamang na maninipis ang malinis. Dali-daling inilagay ni Adong ang
+        mga barya sa kaniyang lukbutan. Ilan pang barya ang nalaglag sa kaniyang palad. At sa
+        kaabalahan niya’y hindi na napansing kakaunti na ang mga taong lumalabas mula sa simbahan.
+
+
+
+    </string>
+    <string name="mabangis6">
+        \n
+        Nakita na naman ni Adong ang mga mukhang malamig, ang imbay ng mga
+        kamay na nagpapahiwatig ng pagwawalang bahala, ang mga hakbang ng nagmamadaling
+        pag-iwas.\n
+
+        “Adong… ayun na si Bruno” narinig niyang wika ni Aling Ebeng.\n
+        Tinanaw ni Adong ang ininguso sa kaniya ni Aling Ebeng. Si Bruno nga. Ang malapad na katawan,
+        ang namumutok na mga bisig. Ang maliit na ulong pinapangit ng suot na gora. Napadukot si
+        Adong sa kaniyang bulsa. Dinama niya ang mga barya roon. Malamig.
+        At ang lamig na iyon ay waring dugong biglang umagos sa kaniyang mga ugat. Ngunit ang lamig
+        na iyon ay hindi nakasapat upang ang apoy na nararamdaman niya kangina pa ay mamamatay.
+        Mahigpit niyang kinulong sa kaniyang palad ang mga baryang
+        napagpalimusan.\n
+        “Diyan na kayo, Aling Ebeng… sabihin ninyo kay Bruno na wala ako!” mabilis niyang
+        sinabi sa matanda.\n
+        “Ano? Naloloko ka na ba, Adong? Sasaktan ka ni Bruno. Nakita ka ni Bruno!”\n
+
+    </string>
+    <string name="mabangis7">
+        \n
+        Narinig man ni Adong ang sinabi ng matanda, nagpatuloy pa rin sa paglalakad, sa simula’y
+        marahan, ngunit nang makubli siya sa kabila ng bakod ng simbahan ay pumulas siya ng takbo.
+        Lumusot siya sa pagitan ng mga dyipni na mabagal sa pagtakbo. Sumiksik
+        siya sa kakapalan ng mga taong salu-salubong sa paglalakad. At akala niya’y nawala na siya sa
+        loob ng sinuot niyang mumunting iskinita.
+        \n
+        Sumandal siya sa poste ng ilaw-dagitab. Dinama niya ang tigas niyon sa pamamagitan ng
+        kaniyang likod. At sa murang isipang iyon ni Adong ay tumindig ang tagumpay ng isang musmos
+        na paghihimagsik ng paglayo kay Bruno, ng paglayo sa Quiapo, ng paglayo
+        sa gutom, sa malalamig na mukha, sa makatunghay na simbahan, sa kabangisang sa mula’t pa’y
+        nakilala niya at kinasusuklaman. Muling dinama niya ang mga barya sa kaniyang bulsa. At iyon
+        ay matagal din niyang ipinakalansing.
+        “Adong!” Sinundan iyon ng papalapit na mga yabag.\n
+
+    </string>
+    <string name="mabangis8">
+        Napahindik si Adong. Ang basag na tinig ay naghatid sa kaniya ng lagim. Ibig niyang tumakbo.
+        Ibig niyang ipagpatuloy ang kaniyang paglayo. Ngunit ang mga kamay ni Bruno ay parang bakal
+        na nakahawak na sa kaniyang bisig, niluluray ang munting lakas
+        na nagkakaroon ng kapangyarihang maghimagsik laban sa gutom, sa pangamba at kabangisan.
+        “Bitiwan mo ako! Bitiwan mo ako!” Naisigaw na lamang ni Adong. Ngunit hindi na niya muling
+        narinig ang basag na tinig. Naramdaman na lamang niya ang malupit na palad ni Bruno. Natulig
+        siya. Nahilo. At pagkaraan ng ilang sandali, hindi
+        na niya naramdaman ang kabangisan sa kapayapaang biglang kumandong sa kaniya.
+
     </string>
 </resources>

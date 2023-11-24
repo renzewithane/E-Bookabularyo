@@ -16,7 +16,7 @@
 
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/panel_char_one"
+            app:srcCompat="@drawable/bg1"
             android:scaleType="centerCrop"
             />
 
@@ -33,64 +33,69 @@
 
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/panel_char_two"
+            app:srcCompat="@drawable/bg2"
             android:scaleType="centerCrop"
             />
 
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/character1Message"
+    <RelativeLayout
+        android:id="@+id/a"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/message1"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/character1Message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/message1"
 
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
 
-        android:layout_marginTop="288dp"
+            android:layout_marginTop="238dp"
 
-        android:layout_marginStart="118dp"
-        android:layout_marginEnd="21dp"
+            android:layout_marginStart="168dp"
+            android:layout_marginEnd="21dp"
 
-        android:textColor="@color/white"
-        android:justificationMode="inter_word"
-        android:fontFamily="@font/dongle_regular"
-        android:lineHeight="@dimen/mid"
+            android:textColor="@color/white"
+            android:justificationMode="inter_word"
+            android:fontFamily="@font/dongle_regular"
+            android:lineHeight="@dimen/mid"
 
-        android:textSize="@dimen/text_hard"
+            android:textSize="@dimen/text_hard"
 
-        >
-    </TextView>
-    <TextView
-        android:id="@+id/character2Message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/message2"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/character2Message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/message2"
 
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
 
-        android:layout_marginTop="288dp"
+            android:layout_marginTop="238dp"
 
-        android:layout_marginStart="118dp"
-        android:layout_marginEnd="21dp"
+            android:layout_marginStart="168dp"
+            android:layout_marginEnd="21dp"
 
-        android:textColor="@color/white"
-        android:justificationMode="inter_word"
-        android:fontFamily="@font/dongle_regular"
-        android:lineHeight="@dimen/mid"
+            android:textColor="@color/white"
+            android:justificationMode="inter_word"
+            android:fontFamily="@font/dongle_regular"
+            android:lineHeight="@dimen/mid"
 
-        android:textSize="@dimen/text_hard"
+            android:textSize="@dimen/text_hard"
 
-        >
-    </TextView>
+            >
+        </TextView>
+    </RelativeLayout>
+
     <Button
         android:id="@+id/nextButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
+
 
         android:text="@string/next"
 
@@ -99,9 +104,8 @@
         android:background="@drawable/rounded_corner_shape"
         android:textColor="@color/white"
         android:textSize="@dimen/text_header"
-        android:layout_marginStart="168dp"
-        android:layout_marginEnd="@dimen/insane"
-        android:layout_marginBottom="168dp"
+        android:layout_margin="@dimen/text_header2"
+
 
         >
         

@@ -53,13 +53,13 @@ public class Quiz extends Fragment {
 
                 Toast.makeText(getContext(), "This is "+ kwentoModel.getKwentoTitle() + " Quiz ", Toast.LENGTH_SHORT).show();
 
-                if (kwentoModel.getKwentoTitle().equals("Sarranggola")){
+                if (kwentoModel.getKwentoTitle().equals("Saranggola")){
                     Intent intent = new Intent(getContext(), Sarrangola.class);
 
                     intent.putExtra("storyTitleData", kwentoModel.getKwentoTitle());
 
                     startActivity(intent);
-                    Toast.makeText(getContext(), "This is "+ kwentoModel.getKwentoTitle() + " Quiz ", Toast.LENGTH_SHORT).show();
+
                 }
                 else if (kwentoModel.getKwentoTitle().equals("Mabangis Na Lungsod"))
                 {
@@ -68,7 +68,7 @@ public class Quiz extends Fragment {
                     intent.putExtra("storyTitleData", kwentoModel.getKwentoTitle());
 
                     startActivity(intent);
-                    Toast.makeText(getContext(), "This is "+ kwentoModel.getKwentoTitle() + " Quiz ", Toast.LENGTH_SHORT).show();
+
 
                 }
             }
@@ -84,9 +84,9 @@ public class Quiz extends Fragment {
     private List<KwentoModel> KwentoPopulator()
     {
         List<KwentoModel> list = new ArrayList<>();
-        list.add(new KwentoModel(R.drawable.book_pic_one, "Sarranggola"));
+        list.add(new KwentoModel(R.drawable.book_pic_one, "Saranggola"));
         list.add(new KwentoModel(R.drawable.book_pic_two, "Mabangis Na Lungsod"));
-        list.add(new KwentoModel(R.drawable.watdahill, "What the Duck is this"));
+
 
         return list;
     }

@@ -39,22 +39,38 @@
         android:textSize="@dimen/text_somwhatbig">
 
     </TextView>
-
-    <TextView
-        android:layout_below="@+id/author"
-        android:id="@+id/body"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/grayish"
-        android:text="body"
-        android:fontFamily="@font/dongle_regular"
-        android:lineHeight="@dimen/high"
-        android:textSize="@dimen/text_somwhatbig"
-        android:layout_margin="@dimen/mid"
 
+        android:layout_below="@+id/author"
         >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
-    </TextView>
+            >
+
+            <TextView
+                android:id="@+id/body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="@dimen/mid"
+                android:layout_marginTop="@dimen/mid"
+                android:layout_marginEnd="@dimen/mid"
+                android:layout_marginBottom="@dimen/mid"
+                android:fontFamily="@font/dongle_regular"
+
+                android:lineHeight="@dimen/high"
+                android:text="body"
+                android:textColor="@color/grayish"
+                android:textSize="@dimen/text_somwhatbig">
+
+            </TextView>
+        </LinearLayout>
+    </ScrollView>
+
 
 
 

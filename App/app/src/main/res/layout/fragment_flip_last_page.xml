@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageViewBGlast"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:scaleType="centerCrop"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rounded_corner_shape2"
+        android:backgroundTint="@color/white"
+        android:orientation="vertical"
+
+        android:padding="@dimen/low"
+        >
+        <LinearLayout
+            android:id="@+id/homeback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:gravity="center"
+            >
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/back_button"
+                android:layout_weight="0.1"
+                >
+
+
+            </ImageView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Back to Home"
+                android:gravity="left|center"
+                android:fontFamily="@font/dongle_bold"
+                android:layout_weight="0.9"
+                android:textSize="@dimen/text_somwhatbig"
+                android:layout_marginStart="8dp"
+                >
+            </TextView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/bookTitleLast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="bookTitle"
+            android:gravity="left"
+            android:fontFamily="@font/dongle_bold"
+
+            android:textSize="@dimen/text_header2"
+            android:textColor="@color/black"
+            >
+        </TextView>
+
+        <TextView
+            android:id="@+id/bookAuthorLast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="bookAuthor"
+
+            android:fontFamily="@font/dongle_bold"
+            android:gravity="left"
+            android:textSize="@dimen/text_hard"
+            android:layout_marginTop="-10dp"
+            >
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            >
+
+            <Button
+                android:id="@+id/basahinUlit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_shape"
+                android:backgroundTint="@color/red"
+                android:layout_weight="0.5"
+                android:layout_margin="@dimen/high"
+
+                android:text="Basahin Muli"
+                android:fontFamily="@font/dongle_bold"
+                android:textColor="@color/white"
+                android:textSize="26dp"
+
+                >
+            </Button>
+
+            <Button
+                android:id="@+id/Pagsusulit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_shape"
+                android:backgroundTint="@color/red"
+                android:layout_weight="0.5"
+                android:layout_margin="@dimen/high"
+
+                android:text="Pagsusulit"
+                android:fontFamily="@font/dongle_bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_header2"
+
+                >
+            </Button>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -18,16 +18,17 @@
             android:id="@+id/quizKwentoTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TITLE_TITLE"
+            android:layout_marginStart="@dimen/insane"
 
-            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/insane"
+            android:layout_marginEnd="@dimen/insane"
+            android:layout_marginBottom="@dimen/insane"
             android:fontFamily="@font/dongle_bold"
-            android:textSize="@dimen/text_verybig"
+
             android:gravity="center"
-
-            android:layout_margin="@dimen/insane"
-
-            >
+            android:text="TITLE_TITLE"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_verybig">
 
         </TextView>
 
@@ -60,7 +61,6 @@
 
     <RelativeLayout
         android:id="@+id/test1"
-
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -88,7 +88,7 @@
             android:textSize="@dimen/text_header"
             android:fontFamily="@font/dongle_bold"
             android:padding="5dp"
-            android:lineHeight="@dimen/mid"
+            android:lineHeight="@dimen/high"
             />
 
         <LinearLayout
@@ -112,7 +112,7 @@
                 android:textColor="@color/grayish"
                 android:textSize="@dimen/text_somwhatbig"
                 android:fontFamily="@font/dongle_bold"
-                android:lineHeight="@dimen/mid"
+                android:lineHeight="@dimen/high"
 
                 />
 
@@ -127,7 +127,7 @@
                 android:textColor="@color/grayish"
                 android:textSize="@dimen/text_somwhatbig"
                 android:fontFamily="@font/dongle_bold"
-                android:lineHeight="@dimen/mid"
+                android:lineHeight="@dimen/high"
             />
 
         </LinearLayout>
@@ -166,7 +166,7 @@
             android:textColor="@color/grayish"
             android:textSize="@dimen/text_header"
             android:fontFamily="@font/dongle_bold"
-            android:lineHeight="@dimen/mid"
+            android:lineHeight="@dimen/high"
 
 
             />
@@ -195,7 +195,7 @@
                 android:textSize="@dimen/text_somwhatbig"
                 android:fontFamily="@font/dongle_bold"
 
-                android:lineHeight="@dimen/mid"
+                android:lineHeight="@dimen/high"
                 />
 
             <Button
@@ -213,7 +213,7 @@
                 android:textSize="@dimen/text_somwhatbig"
                 android:fontFamily="@font/dongle_bold"
 
-                android:lineHeight="@dimen/mid" />
+                android:lineHeight="@dimen/high" />
 
             <Button
                 android:id="@+id/Q2_C"
@@ -228,7 +228,7 @@
                 android:textSize="@dimen/text_somwhatbig"
                 android:fontFamily="@font/dongle_bold"
 
-                android:lineHeight="@dimen/mid"
+                android:lineHeight="@dimen/high"
                 />
             <Button
                 android:id="@+id/Q2_D"
@@ -243,7 +243,7 @@
                 android:textSize="@dimen/text_somwhatbig"
                 android:fontFamily="@font/dongle_bold"
 
-                android:lineHeight="@dimen/mid"
+                android:lineHeight="@dimen/high"
                 />
         </LinearLayout>
 
@@ -286,7 +286,7 @@
                 android:layout_marginEnd="@dimen/insane"
 
 
-                android:lineHeight="@dimen/mid"
+                android:lineHeight="@dimen/low"
                 />
 
             <LinearLayout
@@ -425,7 +425,7 @@
             android:layout_width="125dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="PROCEED"
+            android:text="MAGPATULOY"
 
             android:textSize="@dimen/text_header2"
             android:textColor="@color/white"
@@ -555,7 +555,7 @@
 
 
             android:fontFamily="@font/dongle_bold"
-            android:text="CONTINUE"
+            android:text="MAGPATULOY"
 
             android:textColor="@color/white"
             android:textSize="@dimen/text_header2"

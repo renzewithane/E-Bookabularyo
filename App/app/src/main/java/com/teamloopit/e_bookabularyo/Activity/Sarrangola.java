@@ -67,7 +67,8 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
     private TextView quizTitle;
     private String quizTitleStr;
     private RelativeLayout openingStatementLayout;
-    private long time = 100;
+    private long time = 1500;
+    int activity = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -200,12 +201,12 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
             selectedAnswer  = clickedButton.getText().toString();
             if(selectedAnswer.equals(SaranggolaQA.Correct_answer_test1[currentQuestionIndex])){
                 clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
-                clickedButton.setText("CORRECT");
+                clickedButton.setText("TAMA");
                 score_test1_value++;
             }
             else{
                 clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.red), PorterDuff.Mode.MULTIPLY);
-                clickedButton.setText("WRONG");
+                clickedButton.setText("MALI");
                 selectedAnswer  = clickedButton.getText().toString();
 
 
@@ -236,12 +237,12 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
             selectedAnswer  = clickedButton.getText().toString();
             if(selectedAnswer.equals(SaranggolaQA.Correct_answer_test2[currentQuestionIndex_test2])){
                 clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
-                clickedButton.setText("CORRECT");
+                clickedButton.setText("TAMA");
                 score_test2_value++;
             }
             else{
                 clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.red), PorterDuff.Mode.MULTIPLY);
-                clickedButton.setText("WRONG");
+                clickedButton.setText("MALI");
                 selectedAnswer  = clickedButton.getText().toString();
 
 
@@ -273,12 +274,12 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
             selectedAnswer  = clickedButton.getText().toString();
             if(selectedAnswer.equals(SaranggolaQA.Correct_answer_test3[currentQuestionIndex_test3])){
                 clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
-                clickedButton.setText("CORRECT");
+                clickedButton.setText("TAMA");
                 score_test3_value++;
             }
             else{
                 clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.red), PorterDuff.Mode.MULTIPLY);
-                clickedButton.setText("WRONG");
+                clickedButton.setText("MALI");
                 selectedAnswer  = clickedButton.getText().toString();
 
 
@@ -307,8 +308,8 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
         OpA.getBackground().clearColorFilter();
         OpB.getBackground().clearColorFilter();
         if(currentQuestionIndex == totalQuestion ){
+            relativeLayout_test1.setVisibility(View.GONE);
             test_Panuto();
-
             return;
         }
 
@@ -431,19 +432,19 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
         String passStatus_test2 = "";
         String passStatus_test3 = "";
         if (score_test1_value >= totalQuestion*0.60){
-            passStatus_test1 = "Passed";
+            passStatus_test1 = "MAHUSAY!";
         }else {
-            passStatus_test1 = "Failed";
+            passStatus_test1 = "GALINGAN PA!";
         }
         if (score_test2_value >= totalQuestion_test2*0.60){
-            passStatus_test2 = "Passed";
+            passStatus_test2 = "MAHUSAY!";
         }else {
-            passStatus_test2 = "Failed";
+            passStatus_test2 = "GALINGAN PA!";
         }
         if (score_test3_value >= totalQuestion_test3*0.60){
-            passStatus_test3 = "Passed";
+            passStatus_test3 = "MAHUSAY!";
         }else {
-            passStatus_test3 = "Failed";
+            passStatus_test3 = "GALINGAN PA!";
         }
 
 
@@ -462,10 +463,10 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
     }
 
     void test_Panuto(){
-        if (relativeLayout_test1.getVisibility() == View.VISIBLE){
+        if (activity == 0){
             panuto_text.setText(R.string.Panuto2_kite);
 
-        } else if (relativeLayout_test1.getVisibility() == View.GONE) {
+        } else if (activity == 1) {
             panuto_text.setText(R.string.Panuto3_kite);
 
         }
@@ -479,14 +480,15 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (relativeLayout_test1.getVisibility() == View.VISIBLE){
+                if (activity == 0){
                     panuto_text.setText(R.string.Panuto2_kite);
                     relativeLayout_test1.setVisibility(View.GONE);
                     panuto.setVisibility(View.GONE);
+                    activity++;
                     continue_test2();
 
 
-                } else if (relativeLayout_test1.getVisibility() == View.GONE) {
+                } else if (activity == 1) {
                     panuto_text.setText(R.string.Panuto3_kite);
                     panuto.setVisibility(View.GONE);
                     continue_test3();

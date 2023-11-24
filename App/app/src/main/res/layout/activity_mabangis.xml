@@ -44,18 +44,18 @@
         android:id="@+id/startQuizAnswerButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/imageQuizTime"
+        android:layout_marginStart="@dimen/insane"
+        android:layout_marginTop="@dimen/insane"
+        android:layout_marginEnd="@dimen/insane"
+        android:layout_marginBottom="@dimen/insane"
         android:background="@drawable/rounded_corner_shape"
+
         android:backgroundTint="@color/blue"
+        android:fontFamily="@font/dongle_bold"
         android:text="@string/answertag"
         android:textColor="@color/white"
-        android:fontFamily="@font/dongle_bold"
-        android:textSize="@dimen/text_header"
-
-        android:layout_margin="@dimen/insane"
-
-        android:layout_below="@+id/imageQuizTime"
-        >
-    </Button>
+        android:textSize="@dimen/text_header"></Button>
   </RelativeLayout>
 
   <RelativeLayout
@@ -83,7 +83,7 @@
         android:textColor="@color/grayish"
         android:textSize="@dimen/text_header"
         android:fontFamily="@font/dongle_bold"
-        android:lineHeight="@dimen/mid"
+        android:lineHeight="@dimen/high"
         android:padding="5dp"
         />
 
@@ -97,7 +97,7 @@
 
 
       <Button
-          android:lineHeight="@dimen/mid"
+          android:lineHeight="@dimen/high"
           android:id="@+id/Q1_A"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
@@ -122,7 +122,7 @@
           android:textSize="@dimen/text_somwhatbig"
           android:fontFamily="@font/dongle_bold"
 
-          android:lineHeight="@dimen/mid"
+          android:lineHeight="@dimen/high"
 
 
           />
@@ -163,7 +163,7 @@
         android:textColor="@color/grayish"
         android:textSize="@dimen/text_header"
         android:fontFamily="@font/dongle_bold"
-        android:lineHeight="@dimen/mid"
+        android:lineHeight="@dimen/high"
 
 
         />
@@ -192,7 +192,7 @@
           android:textSize="@dimen/text_somwhatbig"
           android:fontFamily="@font/dongle_bold"
 
-          android:lineHeight="@dimen/mid"
+          android:lineHeight="@dimen/high"
           />
 
       <Button
@@ -210,7 +210,7 @@
           android:textSize="@dimen/text_somwhatbig"
           android:fontFamily="@font/dongle_bold"
 
-          android:lineHeight="@dimen/mid" />
+          android:lineHeight="@dimen/high" />
 
       <Button
           android:id="@+id/Q2_C"
@@ -225,7 +225,7 @@
           android:textSize="@dimen/text_somwhatbig"
           android:fontFamily="@font/dongle_bold"
 
-          android:lineHeight="@dimen/mid"
+          android:lineHeight="@dimen/high"
           />
 
     </LinearLayout>
@@ -269,7 +269,7 @@
           android:layout_marginEnd="@dimen/insane"
 
 
-          android:lineHeight="@dimen/mid"
+          android:lineHeight="@dimen/low"
           />
 
       <LinearLayout
@@ -407,7 +407,7 @@
         android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="PROCEED"
+        android:text="MAGPATULOY"
 
         android:textSize="@dimen/text_header2"
         android:textColor="@color/white"
@@ -538,7 +538,7 @@
 
 
         android:fontFamily="@font/dongle_bold"
-        android:text="CONTINUE"
+        android:text="MAGPATULOY"
 
         android:textColor="@color/white"
         android:textSize="@dimen/text_header2"

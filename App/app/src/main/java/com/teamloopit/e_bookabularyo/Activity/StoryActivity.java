@@ -2,6 +2,7 @@ package com.teamloopit.e_bookabularyo.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
@@ -20,6 +21,10 @@ public class StoryActivity extends AppCompatActivity {
     private Button read, watch;
 
     private ImageView bg;
+    private String userName;
+    private SharedPreferences mPreferences;
+
+    private String sharedPrefFile = "com.teamloopit.e_bookabularyo";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,8 +36,8 @@ public class StoryActivity extends AppCompatActivity {
 
         title = findViewById(R.id.bookTitle);
         author = findViewById(R.id.bookAuthor);
-
-
+        mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
+        userName = mPreferences.getString("userName", "");
 
         read = findViewById(R.id.readTitle);
 
@@ -57,9 +62,28 @@ public class StoryActivity extends AppCompatActivity {
                 intent.putExtra("storyTitleData", storyToShow);
 
                 startActivity(intent);
+
             }
         });
 
+        watch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(StoryActivity.this, VideoActivity.class);
+
+                intent.putExtra("storyTitleData", storyToShow);
+
+                startActivity(intent);
+            }
+        });
+
+    }
+    public void onBackPressed() {
+        Intent intent = new Intent(StoryActivity.this, HomeActivity.class);
+        intent.putExtra("userData", userName);
+        finish();
+        startActivity(intent);
+        super.onBackPressed();
     }
     public void SaraggolaCreated()
     {

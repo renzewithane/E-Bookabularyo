@@ -71,7 +71,8 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
     private String quizTitleStr;
     private RelativeLayout openingStatementLayout;
 
-    private long time = 100;
+    private long time = 1500;
+    int activity = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -310,7 +311,7 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
         OpB.getBackground().clearColorFilter();
         if(currentQuestionIndex == totalQuestion ){
             test_Panuto();
-
+            relativeLayout_test1.setVisibility(View.GONE);
             return;
         }
 
@@ -431,19 +432,19 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
         String passStatus_test2 = "";
         String passStatus_test3 = "";
         if (score_test1_value >= totalQuestion*0.60){
-            passStatus_test1 = "Passed";
+            passStatus_test1 = "MAHUSAY!";
         }else {
-            passStatus_test1 = "Failed";
+            passStatus_test1 = "GALINGAN PA!";
         }
         if (score_test2_value >= totalQuestion_test2*0.60){
-            passStatus_test2 = "Passed";
+            passStatus_test2 = "MAHUSAY!";
         }else {
-            passStatus_test2 = "Failed";
+            passStatus_test2 = "GALINGAN PA!";
         }
         if (score_test3_value >= totalQuestion_test3*0.60){
-            passStatus_test3 = "Passed";
+            passStatus_test3 = "MAHUSAY!";
         }else {
-            passStatus_test3 = "Failed";
+            passStatus_test3 = "GALINGAN PA!";
         }
 
 
@@ -462,11 +463,11 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
     }
 
     void test_Panuto(){
-        if (relativeLayout_test1.getVisibility() == View.VISIBLE){
-            panuto_text.setText(R.string.Panuto2);
+        if (activity == 0){
+            panuto_text.setText(R.string.Panuto2_kite);
 
-        } else if (relativeLayout_test1.getVisibility() == View.GONE) {
-            panuto_text.setText(R.string.Panuto3);
+        } else if (activity == 1) {
+            panuto_text.setText(R.string.Panuto3_kite);
 
         }
 
@@ -479,15 +480,16 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (relativeLayout_test1.getVisibility() == View.VISIBLE){
-                    panuto_text.setText(R.string.Panuto2);
+                if (activity == 0){
+                    panuto_text.setText(R.string.Panuto2_kite);
                     relativeLayout_test1.setVisibility(View.GONE);
                     panuto.setVisibility(View.GONE);
+                    activity++;
                     continue_test2();
 
 
-                } else if (relativeLayout_test1.getVisibility() == View.GONE) {
-                    panuto_text.setText(R.string.Panuto3);
+                } else if (activity == 1) {
+                    panuto_text.setText(R.string.Panuto3_kite);
                     panuto.setVisibility(View.GONE);
                     continue_test3();
 

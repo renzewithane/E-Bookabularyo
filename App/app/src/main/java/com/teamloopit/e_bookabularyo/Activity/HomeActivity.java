@@ -26,6 +26,8 @@ public class HomeActivity extends AppCompatActivity {
     private TextView txtView_UserName;
 
     private String userName;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +42,7 @@ public class HomeActivity extends AppCompatActivity {
         bottomNavigation.add(new MeowBottomNavigation.Model(1, R.drawable.baseline_home_24));
         bottomNavigation.add(new MeowBottomNavigation.Model(2, R.drawable.baseline_quiz_24));
         bottomNavigation.add(new MeowBottomNavigation.Model(3, R.drawable.baseline_person_24));
-        bottomNavigation.add(new MeowBottomNavigation.Model(4, R.drawable.baseline_settings_24));
+
         bottomNavigation.setOnClickMenuListener(new Function1<MeowBottomNavigation.Model, Unit>() {
             @Override
             public Unit invoke(MeowBottomNavigation.Model model) {
@@ -61,9 +63,7 @@ public class HomeActivity extends AppCompatActivity {
                     case 3:
                         selectedFragment = new AboutUs();
                         break;
-                    case 4:
-                        selectedFragment = new Settings();
-                        break;
+
                 }
 
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, selectedFragment).commit();
@@ -86,11 +86,7 @@ public class HomeActivity extends AppCompatActivity {
         }
         String data = intent.getStringExtra("userData");
 
-        if(data.isEmpty())
-        {
-            Utilities.ShowCriticalErrorDialog(this, "Failed Extra", "The extra seems to be empty!");
-            return;
-        }
+
 
         userName = data;
     }
