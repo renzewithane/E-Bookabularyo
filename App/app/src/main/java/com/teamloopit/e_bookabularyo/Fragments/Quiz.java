@@ -51,7 +51,6 @@ public class Quiz extends Fragment {
             @Override
             public void onItemClick(KwentoModel kwentoModel) {
 
-                Toast.makeText(getContext(), "This is "+ kwentoModel.getKwentoTitle() + " Quiz ", Toast.LENGTH_SHORT).show();
 
                 if (kwentoModel.getKwentoTitle().equals("Saranggola")){
                     Intent intent = new Intent(getContext(), Sarrangola.class);

@@ -197,8 +197,7 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
     @Override
     public void onClick(View view) {
         if (relativeLayout_test1.getVisibility() == View.VISIBLE){
-            OpA.setBackgroundColor(Color.WHITE);
-            OpB.setBackgroundColor(Color.WHITE);
+
             OpA.setEnabled(false);
             OpB.setEnabled(false);
             Button clickedButton = (Button) view;
@@ -209,7 +208,7 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
                 score_test1_value++;
             }
             else{
-                clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.red), PorterDuff.Mode.MULTIPLY);
+                clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.fred), PorterDuff.Mode.MULTIPLY);
                 clickedButton.setText("MALI");
                 selectedAnswer  = clickedButton.getText().toString();
 
@@ -229,10 +228,6 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
 
         else if (relativeLayout_test1.getVisibility() == View.GONE && relativeLayout_test2.getVisibility() == View.VISIBLE) {
 
-            OpA_test2.setBackgroundColor(Color.WHITE);
-            OpB_test2.setBackgroundColor(Color.WHITE);
-            OpC_test2.setBackgroundColor(Color.WHITE);
-            OpD_test2.setBackgroundColor(Color.WHITE);
             OpA_test2.setEnabled(false);
             OpB_test2.setEnabled(false);
             OpC_test2.setEnabled(false);
@@ -245,7 +240,7 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
                 score_test2_value++;
             }
             else{
-                clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.red), PorterDuff.Mode.MULTIPLY);
+                clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.fred), PorterDuff.Mode.MULTIPLY);
                 clickedButton.setText("MALI");
                 selectedAnswer  = clickedButton.getText().toString();
 
@@ -264,11 +259,7 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
         }
         else if (relativeLayout_test1.getVisibility() == View.GONE && relativeLayout_test2.getVisibility() == View.GONE
                 && relativeLayout_test3.getVisibility() == View.VISIBLE) {
-            OpA_test3.setBackgroundColor(Color.WHITE);
-            OpB_test3.setBackgroundColor(Color.WHITE);
-            OpC_test3.setBackgroundColor(Color.WHITE);
-            OpD_test3.setBackgroundColor(Color.WHITE);
-            OpE_test3.setBackgroundColor(Color.WHITE);
+
             OpA_test3.setEnabled(false);
             OpB_test3.setEnabled(false);
             OpC_test3.setEnabled(false);
@@ -282,7 +273,7 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
                 score_test3_value++;
             }
             else{
-                clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.red), PorterDuff.Mode.MULTIPLY);
+                clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.fred), PorterDuff.Mode.MULTIPLY);
                 clickedButton.setText("MALI");
                 selectedAnswer  = clickedButton.getText().toString();
 
@@ -306,8 +297,6 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
         OpA.setEnabled(true);
         OpB.setEnabled(true);
 
-        OpA.setBackgroundColor(Color.WHITE);
-        OpB.setBackgroundColor(Color.WHITE);
 
         OpA.getBackground().clearColorFilter();
         OpB.getBackground().clearColorFilter();
@@ -330,10 +319,6 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
         OpC_test2.setEnabled(true);
         OpD_test2.setEnabled(true);
 
-        OpA_test2.setBackgroundColor(Color.WHITE);
-        OpB_test2.setBackgroundColor(Color.WHITE);
-        OpC_test2.setBackgroundColor(Color.WHITE);
-        OpD_test2.setBackgroundColor(Color.WHITE);
 
         OpA_test2.getBackground().clearColorFilter();
         OpB_test2.getBackground().clearColorFilter();
@@ -390,11 +375,6 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
         OpD_test3.setEnabled(true);
         OpE_test3.setEnabled(true);
 
-        OpA_test3.setBackgroundColor(Color.WHITE);
-        OpB_test3.setBackgroundColor(Color.WHITE);
-        OpC_test3.setBackgroundColor(Color.WHITE);
-        OpD_test3.setBackgroundColor(Color.WHITE);
-        OpE_test3.setBackgroundColor(Color.WHITE);
 
 
         OpA_test3.getBackground().clearColorFilter();

@@ -201,8 +201,6 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
     @Override
     public void onClick(View view) {
         if (relativeLayout_test1.getVisibility() == View.VISIBLE){
-            OpA.setBackgroundColor(Color.WHITE);
-            OpB.setBackgroundColor(Color.WHITE);
             OpA.setEnabled(false);
             OpB.setEnabled(false);
             Button clickedButton = (Button) view;
@@ -213,7 +211,7 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
                 score_test1_value++;
             }
             else{
-                clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.red), PorterDuff.Mode.MULTIPLY);
+                clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.fred), PorterDuff.Mode.MULTIPLY);
                 clickedButton.setText("WRONG");
                 selectedAnswer  = clickedButton.getText().toString();
 
@@ -233,9 +231,6 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
 
         else if (relativeLayout_test1.getVisibility() == View.GONE && relativeLayout_test2.getVisibility() == View.VISIBLE) {
 
-            OpA_test2.setBackgroundColor(Color.WHITE);
-            OpB_test2.setBackgroundColor(Color.WHITE);
-            OpC_test2.setBackgroundColor(Color.WHITE);
             OpA_test2.setEnabled(false);
             OpB_test2.setEnabled(false);
             OpC_test2.setEnabled(false);
@@ -247,7 +242,7 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
                 score_test2_value++;
             }
             else{
-                clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.red), PorterDuff.Mode.MULTIPLY);
+                clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.fred), PorterDuff.Mode.MULTIPLY);
                 clickedButton.setText("WRONG");
                 selectedAnswer  = clickedButton.getText().toString();
 
@@ -266,11 +261,7 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
         }
         else if (relativeLayout_test1.getVisibility() == View.GONE && relativeLayout_test2.getVisibility() == View.GONE
                 && relativeLayout_test3.getVisibility() == View.VISIBLE) {
-            OpA_test3.setBackgroundColor(Color.WHITE);
-            OpB_test3.setBackgroundColor(Color.WHITE);
-            OpC_test3.setBackgroundColor(Color.WHITE);
-            OpD_test3.setBackgroundColor(Color.WHITE);
-            OpE_test3.setBackgroundColor(Color.WHITE);
+
             OpA_test3.setEnabled(false);
             OpB_test3.setEnabled(false);
             OpC_test3.setEnabled(false);
@@ -284,7 +275,7 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
                 score_test3_value++;
             }
             else{
-                clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.red), PorterDuff.Mode.MULTIPLY);
+                clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.fred), PorterDuff.Mode.MULTIPLY);
                 clickedButton.setText("WRONG");
                 selectedAnswer  = clickedButton.getText().toString();
 
@@ -308,9 +299,6 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
         OpA.setEnabled(true);
         OpB.setEnabled(true);
 
-        OpA.setBackgroundColor(Color.WHITE);
-        OpB.setBackgroundColor(Color.WHITE);
-
         OpA.getBackground().clearColorFilter();
         OpB.getBackground().clearColorFilter();
         if(currentQuestionIndex == totalQuestion ){
@@ -331,9 +319,6 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
         OpB_test2.setEnabled(true);
         OpC_test2.setEnabled(true);
 
-        OpA_test2.setBackgroundColor(Color.WHITE);
-        OpB_test2.setBackgroundColor(Color.WHITE);
-        OpC_test2.setBackgroundColor(Color.WHITE);
 
         OpA_test2.getBackground().clearColorFilter();
         OpB_test2.getBackground().clearColorFilter();
@@ -386,13 +371,6 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
         OpC_test3.setEnabled(true);
         OpD_test3.setEnabled(true);
         OpE_test3.setEnabled(true);
-
-        OpA_test3.setBackgroundColor(Color.WHITE);
-        OpB_test3.setBackgroundColor(Color.WHITE);
-        OpC_test3.setBackgroundColor(Color.WHITE);
-        OpD_test3.setBackgroundColor(Color.WHITE);
-        OpE_test3.setBackgroundColor(Color.WHITE);
-
 
         OpA_test3.getBackground().clearColorFilter();
         OpB_test3.getBackground().clearColorFilter();
@@ -493,7 +471,7 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
 
 
                 } else if (activity == 1) {
-                    panuto_text.setText(R.string.Panuto3_kite);
+                    panuto_text.setText(R.string.Panuto3);
                     panuto.setVisibility(View.GONE);
                     continue_test3();
 
