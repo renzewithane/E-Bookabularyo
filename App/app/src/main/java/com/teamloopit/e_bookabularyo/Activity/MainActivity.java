@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
         {
             startActivity(new Intent(this, WelcomeActivity.class));
             finish();
-            return;
         }
 
         // Checks if the user already stored user name in the app
@@ -49,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         {
             // Method: Go to Home
             SwitchToHome(userName);
-            return;
+            finish();
         }
 
         setContentView(R.layout.activity_main);
