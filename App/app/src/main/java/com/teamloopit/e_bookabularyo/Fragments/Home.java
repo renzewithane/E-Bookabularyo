@@ -19,6 +19,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.teamloopit.e_bookabularyo.Activity.FlipActivity;
 import com.teamloopit.e_bookabularyo.Activity.StoryActivity;
 import com.teamloopit.e_bookabularyo.KwentoAdapter;
 import com.teamloopit.e_bookabularyo.KwentoModel;
@@ -48,6 +49,8 @@ public class Home extends Fragment {
     private TextView t;
     public Home() {}
     public LinearLayout ipagpatuloy1, ipagpatuloy2;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -90,6 +93,19 @@ public class Home extends Fragment {
             ipagpatuloy2.setVisibility(View.INVISIBLE);
         }
 
+        if(ipagpatuloy1.getVisibility() == View.VISIBLE) {
+            ipagpatuloy1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(getContext(), FlipActivity.class);
+
+                    intent.putExtra("storyTitleData", pogressBookTitle);
+
+                    startActivity(intent);
+                }
+            });
+        }
+
         // Recyclerview for the list view of the kwentos
         RecyclerView kwentoRecyclerView = view.findViewById(R.id.kwentoRecyclerView);
 
@@ -113,7 +129,7 @@ public class Home extends Fragment {
 
                 startActivity(intent);
 
-                Toast.makeText(getContext(), "This is "+kwentoModel.getKwentoTitle(), Toast.LENGTH_SHORT).show();
+
                 getActivity().finish();
             }
         });

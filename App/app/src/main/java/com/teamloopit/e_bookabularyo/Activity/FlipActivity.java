@@ -105,7 +105,7 @@ public class FlipActivity extends AppCompatActivity {
         arguments.add(R.string.mabangis7);
 
 
-        FlipAdapter pagerAdapter = new FlipAdapter(getSupportFragmentManager(), arguments, R.drawable.sarang_bg_flip, "Mabangis na Lungsod", "Ni Efren R. Abueg", R.drawable.book_pic_two);
+        FlipAdapter pagerAdapter = new FlipAdapter(getSupportFragmentManager(), arguments, R.drawable.lungsod_bg_flip, "Mabangis na Lungsod", "Ni Efren R. Abueg", R.drawable.book_pic_two);
         viewPager.setAdapter(pagerAdapter);
     }
 

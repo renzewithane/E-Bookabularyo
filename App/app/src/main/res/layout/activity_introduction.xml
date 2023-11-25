@@ -16,7 +16,7 @@
 
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/bg1"
+            app:srcCompat="@drawable/bg"
             android:scaleType="centerCrop"
             />
 
@@ -33,36 +33,76 @@
 
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/bg2"
+            app:srcCompat="@drawable/bg"
             android:scaleType="centerCrop"
             />
 
     </LinearLayout>
+
     <RelativeLayout
         android:id="@+id/a"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/t"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Maligayang pagdating sa"
+            android:gravity="center"
+
+            android:textColor="#000000"
+
+            android:fontFamily="@font/dongle_regular"
+
+            android:textSize="38dp"
+            android:layout_marginTop="38dp"
+            >
+
+        </TextView>
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:src="@drawable/logo_app"
+            android:layout_below="@id/t"
+            >
+        </ImageView>
+        <ImageView
+            android:id="@+id/character1Pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/c1"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/character1Message"
+
+            >
+        </ImageView>
+        <ImageView
+            android:id="@+id/character2Pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/c2"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/character2Message"
+
+            >
+        </ImageView>
+
         <TextView
             android:id="@+id/character1Message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/message1"
-
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
-
-            android:layout_marginTop="238dp"
-
-            android:layout_marginStart="168dp"
-            android:layout_marginEnd="21dp"
-
-            android:textColor="@color/white"
+            android:layout_below="@id/logo"
+            android:textColor="#434343"
             android:justificationMode="inter_word"
             android:fontFamily="@font/dongle_regular"
             android:lineHeight="@dimen/mid"
 
             android:textSize="@dimen/text_hard"
-
+            android:padding="28dp"
             >
         </TextView>
         <TextView
@@ -70,16 +110,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/message2"
+            android:layout_below="@id/logo"
 
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
+            android:padding="28dp"
 
-            android:layout_marginTop="238dp"
 
-            android:layout_marginStart="168dp"
-            android:layout_marginEnd="21dp"
 
-            android:textColor="@color/white"
+
+            android:textColor="#434343"
             android:justificationMode="inter_word"
             android:fontFamily="@font/dongle_regular"
             android:lineHeight="@dimen/mid"
@@ -88,6 +126,8 @@
 
             >
         </TextView>
+
+
     </RelativeLayout>
 
     <Button
@@ -97,17 +137,19 @@
         android:layout_alignParentBottom="true"
 
 
-        android:text="@string/next"
+        android:layout_marginStart="@dimen/text_header2"
 
-        android:fontFamily="@font/dongle_bold"
+        android:layout_marginTop="@dimen/text_header2"
 
+        android:layout_marginEnd="@dimen/text_header2"
+        android:layout_marginBottom="28dp"
         android:background="@drawable/rounded_corner_shape"
+
+        android:backgroundTint="#f17676"
+        android:fontFamily="@font/dongle_bold"
+        android:text="@string/next"
         android:textColor="@color/white"
-        android:textSize="@dimen/text_header"
-        android:layout_margin="@dimen/text_header2"
+        android:textSize="@dimen/text_header">
 
-
-        >
-        
     </Button>
 </RelativeLayout>
