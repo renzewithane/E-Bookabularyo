@@ -6,6 +6,7 @@ import androidx.core.content.ContextCompat;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -203,11 +204,15 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
             Button clickedButton = (Button) view;
             selectedAnswer  = clickedButton.getText().toString();
             if(selectedAnswer.equals(SaranggolaQA.Correct_answer_test1[currentQuestionIndex])){
+                final MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.correct_audio);
+                mediaPlayer.start();
                 clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
                 clickedButton.setText("TAMA");
                 score_test1_value++;
             }
             else{
+                final MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.wrong_audio);
+                mediaPlayer.start();
                 clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.fred), PorterDuff.Mode.MULTIPLY);
                 clickedButton.setText("MALI");
                 selectedAnswer  = clickedButton.getText().toString();
@@ -235,11 +240,15 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
             Button clickedButton = (Button) view;
             selectedAnswer  = clickedButton.getText().toString();
             if(selectedAnswer.equals(SaranggolaQA.Correct_answer_test2[currentQuestionIndex_test2])){
+                final MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.correct_audio);
+                mediaPlayer.start();
                 clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
                 clickedButton.setText("TAMA");
                 score_test2_value++;
             }
             else{
+                final MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.wrong_audio);
+                mediaPlayer.start();
                 clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.fred), PorterDuff.Mode.MULTIPLY);
                 clickedButton.setText("MALI");
                 selectedAnswer  = clickedButton.getText().toString();
@@ -268,11 +277,15 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
             Button clickedButton = (Button) view;
             selectedAnswer  = clickedButton.getText().toString();
             if(selectedAnswer.equals(SaranggolaQA.Correct_answer_test3[currentQuestionIndex_test3])){
+                final MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.correct_audio);
+                mediaPlayer.start();
                 clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
                 clickedButton.setText("TAMA");
                 score_test3_value++;
             }
             else{
+                final MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.wrong_audio);
+                mediaPlayer.start();
                 clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.fred), PorterDuff.Mode.MULTIPLY);
                 clickedButton.setText("MALI");
                 selectedAnswer  = clickedButton.getText().toString();
@@ -412,6 +425,7 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
     void finishQuiz(){
         relativeLayout_test3.setVisibility(View.GONE);
         score_board.setVisibility(View.VISIBLE);
+        int ave = 0;
         String passStatus_test1 = "";
         String passStatus_test2 = "";
         String passStatus_test3 = "";
@@ -429,6 +443,19 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
             passStatus_test3 = "MAHUSAY!";
         }else {
             passStatus_test3 = "GALINGAN PA!";
+        }
+
+        ave = (int) ((score_test1_value + score_test2_value +score_test3_value)*0.75);
+
+        if (ave >= 15){
+
+            final MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.congrats);
+            mediaPlayer.start();
+
+        }
+        else {
+            final MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.awww);
+            mediaPlayer.start();
         }
 
 
