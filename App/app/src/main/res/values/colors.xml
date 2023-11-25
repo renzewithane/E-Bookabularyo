@@ -18,4 +18,5 @@
     <color name="dropblack">#DADADA</color>
 
     <color name="green">#0DC100</color>
+    <color name="text">#FFFFFFFF</color>
 </resources>

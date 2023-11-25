@@ -71,8 +71,12 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
     private String quizTitleStr;
     private RelativeLayout openingStatementLayout;
 
+
     private long time = 1500;
     int activity = 0;
+
+    //private long time = 3000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

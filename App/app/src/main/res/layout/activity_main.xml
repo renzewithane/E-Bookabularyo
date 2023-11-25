@@ -10,7 +10,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/main_bg"
+        android:src="@drawable/bg"
         android:scaleType="centerCrop"
         />
 
@@ -22,22 +22,20 @@
         android:fontFamily="@font/dongle_bold"
 
         android:textSize="@dimen/text_header"
-        android:textColor="#FFFFFF"
-
+        android:textColor="#454545"
+        android:layout_marginStart="@dimen/veryhigh"
         android:layout_above="@+id/inputLayout"
-        android:background="#AD000000"
-    android:gravity="center"
-        android:shadowColor="#000000"
-        android:shadowDx="2"
-        android:shadowDy="2"
-        android:shadowRadius="36"
+
+        android:gravity="left"
+
         >
 
     </TextView>
     <LinearLayout
         android:id="@+id/inputLayout"
 
-        android:layout_alignParentBottom="true"
+
+        android:layout_centerInParent="true"
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -72,6 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="62dp"
             android:background="@drawable/baseline_arrow_forward_24"
+            android:backgroundTint="#e67979"
             android:layout_weight="0.8"
             />
     </LinearLayout>

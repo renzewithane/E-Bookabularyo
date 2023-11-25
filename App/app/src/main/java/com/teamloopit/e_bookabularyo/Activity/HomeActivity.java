@@ -64,6 +64,10 @@ public class HomeActivity extends AppCompatActivity {
                     case 3:
                         selectedFragment = new AboutUs();
                         break;
+                    default:
+                        selectedFragment = new Home();
+                        args.putString("userData", userName);
+                        selectedFragment.setArguments(args);
 
                 }
 

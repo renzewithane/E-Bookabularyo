@@ -4,7 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragments.AboutUs"
-    android:layout_margin="@dimen/mid"
+    android:layout_marginStart="@dimen/mid"
+    android:layout_marginEnd="@dimen/mid"
+    android:layout_marginTop="@dimen/mid"
+    android:layout_marginBottom="5dp"
     >
 
     <RelativeLayout
@@ -15,10 +18,11 @@
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="About Us"
+            android:text="MAY AKDA"
 
             android:fontFamily="@font/dongle_bold"
             android:textSize="@dimen/text_verybig"
+
 
             android:textColor="@color/black"
             >
@@ -46,7 +50,7 @@
                     android:layout_height="wrap_content"
 
                     android:background="@drawable/rounded_corner_shape"
-                    android:backgroundTint="#FFEEBC"
+                    android:backgroundTint="#6BC6E8"
                     android:orientation="vertical"
                     android:padding="@dimen/low"
                     >
@@ -92,7 +96,7 @@
 
                             android:lineHeight="@dimen/high"
 
-                            android:textColor="#F44336"
+                            android:textColor="#FFFFFF"
 
                             android:gravity="center"
                             >
@@ -114,7 +118,7 @@
 
                                 android:lineHeight="@dimen/high"
 
-                                android:textColor="@color/black"
+                                android:textColor="@color/text"
 
                                 android:layout_weight="0.65"
 
@@ -131,7 +135,7 @@
 
                                 android:lineHeight="@dimen/high"
 
-                                android:textColor="@color/black"
+                                android:textColor="@color/text"
 
                                 android:layout_weight="0.35"
 
@@ -155,7 +159,7 @@
 
                                 android:lineHeight="@dimen/high"
 
-                                android:textColor="@color/black"
+                                android:textColor="@color/text"
 
                                 android:layout_weight="0.65"
 
@@ -172,7 +176,7 @@
 
                                 android:lineHeight="@dimen/high"
 
-                                android:textColor="@color/black"
+                                android:textColor="@color/text"
 
                                 android:layout_weight="0.35"
 
@@ -196,7 +200,7 @@
 
                                 android:lineHeight="@dimen/high"
 
-                                android:textColor="@color/black"
+                                android:textColor="@color/text"
 
                                 android:layout_weight="0.65"
 
@@ -213,7 +217,7 @@
 
                                 android:lineHeight="@dimen/high"
 
-                                android:textColor="@color/black"
+                                android:textColor="@color/text"
 
                                 android:layout_weight="0.35"
 
@@ -237,7 +241,7 @@
 
                                 android:lineHeight="@dimen/high"
 
-                                android:textColor="@color/black"
+                                android:textColor="@color/text"
 
                                 android:layout_weight="0.65"
 
@@ -254,15 +258,44 @@
 
                                 android:lineHeight="@dimen/high"
 
-                                android:textColor="@color/black"
+                                android:textColor="@color/text"
 
                                 android:layout_weight="0.35"
 
                                 >
 
                             </TextView>
-                        </LinearLayout>
 
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="18dp"
+                            android:background="@drawable/rounded_corner_shape"
+                            android:backgroundTint="@color/white"
+                            android:padding="12dp"
+                            >
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/message1"
+
+                                android:fontFamily="@font/dongle_regular"
+                                android:textSize="21sp"
+
+                                android:lineHeight="@dimen/high"
+
+                                android:textColor="@color/black"
+
+                                android:layout_weight="0.65"
+                                android:justificationMode="inter_word"
+                                >
+
+                            </TextView>
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -274,7 +307,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/l1"
                     android:background="@drawable/rounded_corner_shape"
-                    android:backgroundTint="#FFEEBC"
+                    android:backgroundTint="#E47F7F"
                     android:orientation="vertical"
                     android:padding="@dimen/low"
 
@@ -320,7 +353,7 @@
 
                             android:lineHeight="@dimen/high"
 
-                            android:textColor="#F44336"
+                            android:textColor="@color/white"
 
                             android:gravity="center"
                             >
@@ -342,7 +375,7 @@
 
                                 android:lineHeight="@dimen/high"
 
-                                android:textColor="@color/black"
+                                android:textColor="@color/white"
 
                                 android:layout_weight="0.65"
 
@@ -359,7 +392,7 @@
 
                                 android:lineHeight="@dimen/high"
 
-                                android:textColor="@color/black"
+                                android:textColor="@color/white"
 
                                 android:layout_weight="0.35"
 
@@ -383,7 +416,7 @@
 
                                 android:lineHeight="@dimen/high"
 
-                                android:textColor="@color/black"
+                                android:textColor="@color/white"
 
                                 android:layout_weight="0.65"
 
@@ -400,7 +433,7 @@
 
                                 android:lineHeight="@dimen/high"
 
-                                android:textColor="@color/black"
+                                android:textColor="@color/white"
 
                                 android:layout_weight="0.35"
 
@@ -424,7 +457,7 @@
 
                                 android:lineHeight="@dimen/high"
 
-                                android:textColor="@color/black"
+                                android:textColor="@color/white"
 
                                 android:layout_weight="0.65"
 
@@ -441,7 +474,7 @@
 
                                 android:lineHeight="@dimen/high"
 
-                                android:textColor="@color/black"
+                                android:textColor="@color/white"
 
                                 android:layout_weight="0.35"
 
@@ -465,7 +498,7 @@
 
                                 android:lineHeight="@dimen/high"
 
-                                android:textColor="@color/black"
+                                android:textColor="@color/white"
 
                                 android:layout_weight="0.65"
 
@@ -482,7 +515,7 @@
 
                                 android:lineHeight="@dimen/high"
 
-                                android:textColor="@color/black"
+                                android:textColor="@color/white"
 
                                 android:layout_weight="0.35"
 
@@ -491,7 +524,34 @@
                             </TextView>
                         </LinearLayout>
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="18dp"
+                            android:background="@drawable/rounded_corner_shape"
+                            android:backgroundTint="#79DBFF"
+                            android:padding="12dp"
+                            >
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/message2"
 
+                                android:fontFamily="@font/dongle_regular"
+                                android:textSize="21sp"
+
+                                android:lineHeight="@dimen/high"
+
+                                android:textColor="@color/black"
+
+                                android:layout_weight="0.65"
+                                android:justificationMode="inter_word"
+                                >
+
+                            </TextView>
+
+                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
 

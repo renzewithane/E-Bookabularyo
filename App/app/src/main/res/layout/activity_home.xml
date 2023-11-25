@@ -13,12 +13,11 @@
         android:scaleType="centerCrop"
         >
     </ImageView>
-
     <FrameLayout
         android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/bottomNavigation"
+        android:layout_above="@id/bottomNavigation"
         />
     <com.etebarian.meowbottomnavigation.MeowBottomNavigation
         android:id="@+id/bottomNavigation"
@@ -31,13 +30,15 @@
         app:mbn_countBackgroundColor="@color/black"
         app:mbn_countTextColor="@color/orange"
 
-        app:mbn_defaultIconColor="@color/red"
+        app:mbn_defaultIconColor="#00b0f0"
         app:mbn_rippleColor="@color/orange"
-        app:mbn_selectedIconColor="@color/red"
+        app:mbn_selectedIconColor="#ff6600"
         app:mbn_shadowColor="#1f212121"
         android:layout_alignParentBottom="true"
         >
     </com.etebarian.meowbottomnavigation.MeowBottomNavigation>
+
+
 
 
 </RelativeLayout >

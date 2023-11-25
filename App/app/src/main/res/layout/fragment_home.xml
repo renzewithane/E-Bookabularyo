@@ -38,13 +38,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/hear_a_story"
                 android:layout_below="@+id/userName"
-                android:fontFamily="@font/dongle_regular"
-
-                android:textSize="@dimen/text_header"
+                android:fontFamily="@font/dongle_bold"
+                android:text="@string/hear_a_story"
+                android:layout_marginTop="-18dp"
                 android:textColor="@color/black"
-                >
+                android:textSize="@dimen/text_header">
 
             </TextView>
         </LinearLayout>
@@ -62,7 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Maikling Kwento"
-                android:fontFamily="@font/dongle_regular"
+                android:fontFamily="@font/dongle_bold"
 
                 android:textSize="@dimen/text_header2"
                 android:textColor="@color/black"
@@ -101,7 +100,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Ipagpatuloy ang pagbabasa"
-                    android:fontFamily="@font/dongle_regular"
+                    android:fontFamily="@font/dongle_bold"
 
                     android:textSize="@dimen/text_header2"
                     android:textColor="@color/black"
@@ -151,11 +150,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="BOOK_TITLE"
-                        android:autoSizeMinTextSize="@dimen/text_regular"
-                        android:autoSizeMaxTextSize="46sp"
+                        android:autoSizeMinTextSize="14sp"
+                        android:autoSizeMaxTextSize="38sp"
                         android:fontFamily="@font/dongle_bold"
                         android:layout_marginTop="28dp"
-                        android:textSize="@dimen/text_header2"
+                        android:textSize="28sp"
                         android:textColor="@color/black"
                         >
                     </TextView>

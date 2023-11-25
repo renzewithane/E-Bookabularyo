@@ -15,31 +15,55 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/start_page"
+            android:src="@drawable/bg"
             android:scaleType="centerCrop"
             />
+        <TextView
+            android:id="@+id/t"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Maligayang pagdating sa"
+            android:gravity="center"
+
+            android:textColor="#FFFFFF"
+
+            android:fontFamily="@font/dongle_bold"
+
+            android:textSize="38dp"
+            android:layout_marginTop="38dp"
+            android:background="#00b0f0"
+            >
+
+        </TextView>
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:src="@drawable/logo_app"
+            android:layout_below="@id/t"
+            android:layout_marginTop="28dp"
+            >
+        </ImageView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
+            android:layout_below="@id/logo"
+
             android:layout_centerInParent="true"
 
-            android:layout_marginStart="@dimen/insane"
-            android:layout_marginEnd="@dimen/insane"
+            android:layout_marginStart="78dp"
 
-            android:paddingTop="@dimen/insane"
-
-
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="78dp"
             android:fontFamily="@font/dongle_regular"
-
             android:justificationMode="inter_word"
-
-            android:lineHeight="@dimen/high"
-
+            android:lineHeight="21dp"
             android:text="@string/opening_message"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_hard">
+            android:textColor="#474747"
+            android:textSize="22dp">
 
         </TextView>
     </RelativeLayout>
@@ -51,19 +75,19 @@
         android:id="@+id/nextButton"
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:textSize="@dimen/text_header"
+        android:textSize="28dp"
         android:textStyle="bold"
-        android:text="GET STARTED"
+        android:text="MAGSIMULA NA"
         android:textColor="@color/white"
-        android:layout_marginStart="@dimen/insane"
-        android:layout_marginEnd="@dimen/insane"
-        android:layout_marginBottom="@dimen/high"
+        android:layout_marginStart="84dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="84dp"
 
 
 
         android:layout_alignParentBottom="true"
         android:background="@drawable/rounded_corner_shape"
-
+        android:backgroundTint="#FF8080"
         android:fontFamily="@font/dongle_bold"
 
         >

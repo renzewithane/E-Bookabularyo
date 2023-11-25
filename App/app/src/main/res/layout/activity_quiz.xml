@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/insane"
 
-            android:layout_marginTop="@dimen/insane"
+            android:layout_marginTop="94dp"
             android:layout_marginEnd="@dimen/insane"
             android:layout_marginBottom="@dimen/insane"
             android:fontFamily="@font/dongle_bold"
@@ -37,7 +37,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:src="@drawable/quiz_time">
+            android:src="@drawable/quiz_time"
+            android:layout_below="@+id/startQuizAnswerButton"
+
+            >
 
         </ImageView>
 
@@ -45,18 +48,18 @@
             android:id="@+id/startQuizAnswerButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/quizKwentoTitle"
+            android:layout_marginStart="@dimen/insane"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="@dimen/insane"
+            android:layout_marginBottom="@dimen/insane"
             android:background="@drawable/rounded_corner_shape"
-            android:backgroundTint="@color/blue"
+
+            android:backgroundTint="#20BCF4"
+            android:fontFamily="@font/dongle_bold"
             android:text="@string/answertag"
             android:textColor="@color/white"
-            android:fontFamily="@font/dongle_bold"
-            android:textSize="@dimen/text_header"
-
-            android:layout_margin="@dimen/insane"
-
-            android:layout_below="@+id/imageQuizTime"
-            >
-        </Button>
+            android:textSize="@dimen/text_header"></Button>
     </RelativeLayout>
 
     <RelativeLayout

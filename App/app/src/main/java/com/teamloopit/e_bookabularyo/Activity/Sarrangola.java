@@ -67,8 +67,12 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
     private TextView quizTitle;
     private String quizTitleStr;
     private RelativeLayout openingStatementLayout;
+
     private long time = 1500;
     int activity = 0;
+
+    //private long time = 3000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
