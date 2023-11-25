@@ -32,16 +32,7 @@ public class MainActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
 
-        // Fetch sharedprefs data
-        isNewUser = mPreferences.getBoolean("isNewUser", true);
         userName = mPreferences.getString("userName", "");
-
-        // Checks if the user already had used the app
-        if (isNewUser)
-        {
-            startActivity(new Intent(this, WelcomeActivity.class));
-            finish();
-        }
 
         // Checks if the user already stored user name in the app
         if(!userName.isEmpty())

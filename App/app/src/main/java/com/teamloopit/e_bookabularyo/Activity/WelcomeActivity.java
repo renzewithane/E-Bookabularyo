@@ -40,11 +40,14 @@ public class WelcomeActivity extends AppCompatActivity {
         textView.setAnimation(bot);
         button.setAnimation(left);
 
+        /*
         // Set the isNewUser to false, since the user started to use the app
         SharedPreferences preferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putBoolean("isNewUser", false);
         editor.apply();
+*/
+
 
         nextButton = findViewById(R.id.nextButton);
 
@@ -57,4 +60,6 @@ public class WelcomeActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }

@@ -54,7 +54,7 @@
 
             android:layout_weight="0.2"
 
-            android:textColor="#FFFFFF"
+            android:textColor="#E57979"
             android:textSize="16sp"
 
 
