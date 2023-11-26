@@ -29,7 +29,7 @@ public class FlipActivity extends AppCompatActivity {
     private SharedPreferences mPreferences;
 
     private String sharedPrefFile = "com.teamloopit.e_bookabularyo";
-
+    int pos;
     List<Integer> arguments = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +73,10 @@ public class FlipActivity extends AppCompatActivity {
 
             }
         });
+        if(pos > 0){
+            viewPager.setCurrentItem(pos);
+        }
+
     }
     public void SaraggolaCreated()
     {
@@ -123,6 +127,7 @@ public class FlipActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
         String data = intent.getStringExtra("storyTitleData");
+        int progressPosition = intent.getIntExtra("progressPosition", 0);
 
         if(data.isEmpty())
         {
@@ -130,6 +135,7 @@ public class FlipActivity extends AppCompatActivity {
             return;
         }
 
+        pos = progressPosition;
         storyToShow = data;
     }
     public void navigateToFirstPage() {

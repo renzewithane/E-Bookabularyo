@@ -428,7 +428,7 @@
             android:layout_gravity="center"
             android:text="MAGPATULOY"
 
-            android:textSize="@dimen/text_header2"
+            android:textSize="26sp"
             android:textColor="@color/white"
             android:fontFamily="@font/dongle_bold"
             android:backgroundTint="@color/red"
@@ -559,7 +559,7 @@
             android:text="MAGPATULOY"
 
             android:textColor="@color/white"
-            android:textSize="@dimen/text_header2"
+            android:textSize="26sp"
 
             />
 

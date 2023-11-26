@@ -100,7 +100,7 @@ public class Home extends Fragment {
                     Intent intent = new Intent(getContext(), FlipActivity.class);
 
                     intent.putExtra("storyTitleData", pogressBookTitle);
-
+                    intent.putExtra("progressPosition", progressCurrentPosition);
                     startActivity(intent);
                 }
             });

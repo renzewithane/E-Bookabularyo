@@ -44,7 +44,7 @@ public class WelcomeActivity extends AppCompatActivity {
         button.setAnimation(left);
 
         mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
-        isNewUser = mPreferences.getBoolean("userName", false);
+        isNewUser = mPreferences.getBoolean("isNewUser", true);
 
 
 
@@ -67,7 +67,7 @@ public class WelcomeActivity extends AppCompatActivity {
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                     finish();
                 } else{
-                    startActivity(new Intent(WelcomeActivity.this, HomeActivity.class));
+                    startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                     finish();
                 }
@@ -92,12 +92,11 @@ public class WelcomeActivity extends AppCompatActivity {
             startActivity(new  Intent(WelcomeActivity.this, IntroductionActivity.class));
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             finish();
-        } else{
-            startActivity(new Intent(WelcomeActivity.this, HomeActivity.class));
+        } else {
+            startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             finish();
         }
 
-        finish();
     }
 }
