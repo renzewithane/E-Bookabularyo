@@ -151,23 +151,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
+            android:layout_marginStart="@dimen/insane"
+            android:layout_marginTop="160dp"
+            android:layout_marginEnd="@dimen/insane"
             android:background="@drawable/rounded_corner_shape"
             android:backgroundTint="@color/lightorange"
-            android:layout_marginStart="@dimen/insane"
-            android:layout_marginEnd="@dimen/insane"
-            android:layout_marginTop="250dp"
 
 
-
+            android:fontFamily="@font/dongle_bold"
+            android:lineHeight="@dimen/high"
             android:paddingLeft="@dimen/high"
+
             android:paddingRight="@dimen/high"
             android:text=""
-
             android:textAlignment="center"
             android:textColor="@color/grayish"
             android:textSize="@dimen/text_header"
-            android:fontFamily="@font/dongle_bold"
-            android:lineHeight="@dimen/high"
 
 
             />

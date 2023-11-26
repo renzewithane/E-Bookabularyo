@@ -148,12 +148,11 @@
         android:id="@+id/Q2_questions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:background="@drawable/rounded_corner_shape"
         android:backgroundTint="@color/lightorange"
         android:layout_marginStart="@dimen/insane"
         android:layout_marginEnd="@dimen/insane"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="160dp"
 
 
 
