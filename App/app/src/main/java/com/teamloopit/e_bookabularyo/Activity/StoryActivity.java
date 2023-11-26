@@ -3,6 +3,7 @@ package com.teamloopit.e_bookabularyo.Activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
@@ -16,6 +17,7 @@ import com.teamloopit.e_bookabularyo.Utilities;
 public class StoryActivity extends AppCompatActivity {
 
     private String storyToShow;
+    private MediaPlayer mediaPlayer;
 
     private TextView title, author;
     private Button read, watch;
@@ -28,6 +30,7 @@ public class StoryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mediaPlayer = MediaPlayer.create(this, R.raw.woodclick);
         InitializeActivity();
 
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
@@ -47,9 +50,11 @@ public class StoryActivity extends AppCompatActivity {
         switch (storyToShow)
         {
             case "Saranggola":
+                playSound();
                 SaraggolaCreated();
                 break;
             case "Mabangis Na Lungsod":
+                playSound();
                 MabangisCreated();
                 break;
         }
@@ -116,5 +121,11 @@ public class StoryActivity extends AppCompatActivity {
         }
 
         storyToShow = data;
+    }
+
+    private void playSound() {
+        if (mediaPlayer != null) {
+            mediaPlayer.start();
+        }
     }
 }

@@ -3,7 +3,9 @@ package com.teamloopit.e_bookabularyo.Activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -51,15 +53,14 @@ public class WelcomeActivity extends AppCompatActivity {
 
         nextButton = findViewById(R.id.nextButton);
 
-        nextButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(WelcomeActivity.this, IntroductionActivity.class));
-                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                finish();
-            }
-        });
     }
 
 
+    public void magsimula(View view) {
+        final MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.woodclick);
+        mediaPlayer.start();
+        startActivity(new Intent(WelcomeActivity.this, IntroductionActivity.class));
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        finish();
+    }
 }

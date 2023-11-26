@@ -24,6 +24,8 @@ import com.teamloopit.e_bookabularyo.Utilities;
 
 public class Mabangis extends AppCompatActivity implements View.OnClickListener{
 
+    private MediaPlayer mediaPlayer;
+
     RelativeLayout relativeLayout_test1,relativeLayout_test2,relativeLayout_test3;
     int score_test1_value=0;
     //test1
@@ -82,6 +84,7 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mabangis);
+        mediaPlayer = MediaPlayer.create(this, R.raw.woodclick);
 
         panuto = findViewById(R.id.Panuto);
         panuto_text = findViewById(R.id.Panuto_tes2);
@@ -151,11 +154,14 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
     }
     private void StartQuiz()
     {
+        final MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.woodclick);
+        mediaPlayer.start();
         panuto_text.setText(R.string.Panuto1);
         panuto.setVisibility(View.VISIBLE);
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 panuto.setVisibility(View.GONE);
                 relativeLayout_test1.setVisibility(View.VISIBLE);
                 loadQuestion_tes1();
@@ -164,6 +170,8 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
     }
     private void ShowQuizTime()
     {
+        final MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.woodclick);
+        mediaPlayer.start();
         startQuizButton = findViewById(R.id.startQuizAnswerButton);
         quizTitle = findViewById(R.id.quizKwentoTitle);
         openingStatementLayout = findViewById(R.id.openingStatementLayout);
@@ -201,6 +209,7 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
     }
     @Override
     public void onClick(View view) {
+
         if (relativeLayout_test1.getVisibility() == View.VISIBLE){
             OpA.setEnabled(false);
             OpB.setEnabled(false);
@@ -498,6 +507,7 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 finish();
             }
         });
@@ -524,6 +534,7 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 if (activity == 0){
                     relativeLayout_test1.setVisibility(View.GONE);
                     panuto_text.setText(R.string.Panuto3);
@@ -549,5 +560,12 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
 
 
     }
+
+    private void playSound() {
+        if (mediaPlayer != null) {
+            mediaPlayer.start();
+        }
+    }
+
 
 }

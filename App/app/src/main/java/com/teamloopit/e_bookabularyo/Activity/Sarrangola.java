@@ -19,6 +19,7 @@ import com.teamloopit.e_bookabularyo.R;
 import com.teamloopit.e_bookabularyo.Utilities;
 
 public class Sarrangola extends AppCompatActivity implements View.OnClickListener{
+    private MediaPlayer mediaPlayer;
 
     RelativeLayout relativeLayout_test1,relativeLayout_test2,relativeLayout_test3;
     int score_test1_value=0;
@@ -78,6 +79,7 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+        mediaPlayer = MediaPlayer.create(this, R.raw.woodclick);
 
         panuto = findViewById(R.id.Panuto);
         panuto_text = findViewById(R.id.Panuto_tes2);
@@ -147,6 +149,8 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
 
     private void ShowQuizTime()
     {
+        final MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.woodclick);
+        mediaPlayer.start();
         startQuizButton = findViewById(R.id.startQuizAnswerButton);
         quizTitle = findViewById(R.id.quizKwentoTitle);
         openingStatementLayout = findViewById(R.id.openingStatementLayout);
@@ -184,11 +188,14 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
     }
     private void StartQuiz()
     {
+        final MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.woodclick);
+        mediaPlayer.start();
         panuto_text.setText(R.string.Panuto1_kite);
         panuto.setVisibility(View.VISIBLE);
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 panuto.setVisibility(View.GONE);
                 relativeLayout_test1.setVisibility(View.VISIBLE);
                 loadQuestion_tes1();
@@ -506,6 +513,7 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 finish();
             }
         });
@@ -532,6 +540,7 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 if (activity == 0){
                     panuto_text.setText(R.string.Panuto2_kite);
                     relativeLayout_test1.setVisibility(View.GONE);
@@ -556,6 +565,12 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
 
 
 
+    }
+
+    private void playSound() {
+        if (mediaPlayer != null) {
+            mediaPlayer.start();
+        }
     }
 
 }

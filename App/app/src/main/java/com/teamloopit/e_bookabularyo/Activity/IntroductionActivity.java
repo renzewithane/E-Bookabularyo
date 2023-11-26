@@ -3,6 +3,7 @@ package com.teamloopit.e_bookabularyo.Activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -44,23 +45,6 @@ public class IntroductionActivity extends AppCompatActivity {
         message2.setVisibility(View.INVISIBLE);
         char2.setVisibility(View.INVISIBLE);
 
-        nextButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setVisibility(layout1, message1, char1, View.INVISIBLE);
-                setVisibility(layout2, message2, char2, View.VISIBLE);
-                clickIndex++;
-                if(clickIndex == 2)
-                {
-                    startActivity(new Intent(IntroductionActivity.this, MainActivity.class));
-
-
-
-                    finish();
-                }
-            }
-        });
-
 
     }
 
@@ -68,5 +52,21 @@ public class IntroductionActivity extends AppCompatActivity {
         layout.setVisibility(visibility);
         message.setVisibility(visibility);
         image.setVisibility(visibility);
+    }
+
+    public void magpatuloy(View view) {
+        final MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.woodclick);
+        mediaPlayer.start();
+        setVisibility(layout1, message1, char1, View.INVISIBLE);
+        setVisibility(layout2, message2, char2, View.VISIBLE);
+        clickIndex++;
+        if(clickIndex == 2)
+        {
+            startActivity(new Intent(IntroductionActivity.this, MainActivity.class));
+
+
+
+            finish();
+        }
     }
 }

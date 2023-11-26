@@ -7,6 +7,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import com.teamloopit.e_bookabularyo.FlipAdapter;
@@ -19,6 +20,8 @@ import java.util.List;
 
 
 public class FlipActivity extends AppCompatActivity {
+
+    private MediaPlayer mediaPlayer;
     private String storyToShow;
     ViewPager viewPager;
 
@@ -31,6 +34,7 @@ public class FlipActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mediaPlayer = MediaPlayer.create(this, R.raw.woodclick);
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         setContentView(R.layout.activity_flip);
         InitializeActivity();
@@ -43,9 +47,11 @@ public class FlipActivity extends AppCompatActivity {
         {
             // if saranggola is the value of the storyToShow, run the method SaraggolaCreated(), vice versa to mabangis
             case "Saranggola":
+                playSound();
                 SaraggolaCreated();
                 break;
             case "Mabangis Na Lungsod":
+                playSound();
                 MabangisCreated();
                 break;
         }
@@ -70,6 +76,7 @@ public class FlipActivity extends AppCompatActivity {
     }
     public void SaraggolaCreated()
     {
+        playSound();
         // declare list int of the arguments to be passed in the fragment
         // arguments is consist of the string resource
 
@@ -95,6 +102,7 @@ public class FlipActivity extends AppCompatActivity {
 
     private void MabangisCreated()
     {
+        playSound();
 
         arguments.add(R.string.mabangis1);
         arguments.add(R.string.mabangis2);
@@ -111,6 +119,7 @@ public class FlipActivity extends AppCompatActivity {
 
     private void InitializeActivity()
     {
+        playSound();
         Intent intent = getIntent();
 
         String data = intent.getStringExtra("storyTitleData");
@@ -133,6 +142,7 @@ public class FlipActivity extends AppCompatActivity {
     public void navigateToHome() {
         // Implement logic to navigate to the first page of the ViewPager.
         if (viewPager != null) {
+            playSound();
             finish();
         }
     }
@@ -144,5 +154,10 @@ public class FlipActivity extends AppCompatActivity {
         editor.putInt("currentTotalFragment", count);
         editor.putString("currentTitle", title);
         editor.apply();
+    }
+    private void playSound() {
+        if (mediaPlayer != null) {
+            mediaPlayer.start();
+        }
     }
 }

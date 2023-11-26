@@ -76,7 +76,7 @@
                 android:layout_weight="0.5"
                 android:layout_margin="@dimen/high"
 
-                android:text="Watch"
+                android:text="PANOORIN"
                 android:fontFamily="@font/dongle_bold"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_header2"
@@ -93,7 +93,7 @@
                 android:layout_weight="0.5"
                 android:layout_margin="@dimen/high"
 
-                android:text="Read Book"
+                android:text="BASAHIN"
                 android:fontFamily="@font/dongle_bold"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_header2"

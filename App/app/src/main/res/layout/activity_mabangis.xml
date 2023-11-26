@@ -30,13 +30,14 @@
         >
 
     </TextView>
+
     <ImageView
         android:id="@+id/imageQuizTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/quiz_time"
-        android:layout_centerInParent="true"
-        >
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:src="@drawable/quiz_time">
 
     </ImageView>
 
@@ -46,16 +47,18 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageQuizTime"
         android:layout_marginStart="@dimen/insane"
-        android:layout_marginTop="@dimen/insane"
+        android:layout_marginTop="-572dp"
         android:layout_marginEnd="@dimen/insane"
         android:layout_marginBottom="@dimen/insane"
         android:background="@drawable/rounded_corner_shape"
-
+        android:onClick="sagutan"
         android:backgroundTint="@color/blue"
         android:fontFamily="@font/dongle_bold"
         android:text="@string/answertag"
         android:textColor="@color/white"
-        android:textSize="@dimen/text_header"></Button>
+        android:textSize="@dimen/text_header">
+
+    </Button>
   </RelativeLayout>
 
   <RelativeLayout
@@ -399,7 +402,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="MAGPATULOY"
-
         android:textSize="@dimen/text_header2"
         android:textColor="@color/white"
         android:fontFamily="@font/dongle_bold"

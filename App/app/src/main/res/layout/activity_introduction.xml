@@ -135,20 +135,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-
-
         android:layout_marginStart="@dimen/text_header2"
-
         android:layout_marginTop="@dimen/text_header2"
-
         android:layout_marginEnd="@dimen/text_header2"
         android:layout_marginBottom="28dp"
         android:background="@drawable/rounded_corner_shape"
-
         android:backgroundTint="#f17676"
         android:fontFamily="@font/dongle_bold"
         android:text="@string/next"
         android:textColor="@color/white"
+        android:onClick="magpatuloy"
         android:textSize="@dimen/text_header">
 
     </Button>

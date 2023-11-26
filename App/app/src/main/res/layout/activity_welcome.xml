@@ -79,9 +79,7 @@
         android:layout_marginStart="84dp"
         android:layout_marginEnd="84dp"
         android:layout_marginBottom="84dp"
-
-
-
+        android:onClick="magsimula"
         android:layout_alignParentBottom="true"
         android:background="@drawable/rounded_corner_shape"
         android:backgroundTint="#FF8080"

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
      * SharedPrefs - for storing user usage in the app locally
      */
     private boolean isNewUser;
+    private MediaPlayer mediaPlayer;
     private String userName;
     private SharedPreferences mPreferences;
 
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mediaPlayer = MediaPlayer.create(this, R.raw.woodclick);
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
 
@@ -50,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         proceedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 String userInput = editTextInputName.getText().toString().trim();
 
                 // Check
@@ -68,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 SwitchToHome(userInput);
 
                 // End
+                playSound();
                 finish();
 
             }
@@ -87,5 +92,11 @@ public class MainActivity extends AppCompatActivity {
 
         // Proceed to Home
         startActivity(intent);
+    }
+
+    private void playSound() {
+        if (mediaPlayer != null) {
+            mediaPlayer.start();
+        }
     }
 }

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment;
 
 import android.app.LauncherActivity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -27,12 +28,15 @@ public class HomeActivity extends AppCompatActivity {
     private TextView txtView_UserName;
 
     private String userName;
+    private MediaPlayer mediaPlayer;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        mediaPlayer = MediaPlayer.create(this, R.raw.woodclick);
 
         InitializeMain();
 
@@ -49,22 +53,26 @@ public class HomeActivity extends AppCompatActivity {
             public Unit invoke(MeowBottomNavigation.Model model) {
                 Fragment selectedFragment = null;
                 Bundle args = new Bundle();
-
+                playSound();
                 switch (model.getId()) {
                     case 1:
+                        playSound();
                         selectedFragment = new Home();
                         args.putString("userData", userName);
                         selectedFragment.setArguments(args);
                         break;
                     case 2:
+                        playSound();
                         selectedFragment = new Quiz();
                         args.putString("userData", userName);
                         selectedFragment.setArguments(args);
                         break;
                     case 3:
+                        playSound();
                         selectedFragment = new AboutUs();
                         break;
                     default:
+                        playSound();
                         selectedFragment = new Home();
                         args.putString("userData", userName);
                         selectedFragment.setArguments(args);
@@ -82,6 +90,12 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
+
+    private void playSound() {
+        if (mediaPlayer != null) {
+            mediaPlayer.start();
+        }
+    }
     private void InitializeMain(){
 
         Intent intent = getIntent();
@@ -100,6 +114,7 @@ public class HomeActivity extends AppCompatActivity {
 
     private void InitializeHomeFragment()
     {
+
         Home home = new Home();
         Bundle args = new Bundle();
         args.putString("userData", userName);
