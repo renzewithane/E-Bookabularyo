@@ -93,7 +93,7 @@ public class StoryActivity extends AppCompatActivity {
     public void SaraggolaCreated()
     {
         title.setText("Saranggola");
-        author.setText("Isunulat ni Efren R. Abueg");
+        author.setText("Ni Efren R. Abueg");
         bg.setImageResource(R.drawable.book_pic_one);
 
 
@@ -101,8 +101,8 @@ public class StoryActivity extends AppCompatActivity {
 
     private void MabangisCreated()
     {
-        title.setText("Mabangis na Lunsod");
-        author.setText("Isunulat ni Efren R. Abueg");
+        title.setText("Mabangis na Lungsod");
+        author.setText("Ni Efren R. Abueg");
         bg.setImageResource(R.drawable.book_pic_two);
 
 
