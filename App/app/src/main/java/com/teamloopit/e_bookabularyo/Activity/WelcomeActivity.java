@@ -24,7 +24,8 @@ public class WelcomeActivity extends AppCompatActivity {
     private String sharedPrefFile = "com.teamloopit.e_bookabularyo";
 
     private Button nextButton;
-
+    private SharedPreferences mPreferences;
+    private boolean isNewUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,16 +43,37 @@ public class WelcomeActivity extends AppCompatActivity {
         textView.setAnimation(bot);
         button.setAnimation(left);
 
-        /*
-        // Set the isNewUser to false, since the user started to use the app
-        SharedPreferences preferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putBoolean("isNewUser", false);
-        editor.apply();
-*/
+        mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
+        isNewUser = mPreferences.getBoolean("userName", false);
+
+
+
 
 
         nextButton = findViewById(R.id.nextButton);
+
+
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(isNewUser){
+                    // Set the isNewUser to false, since the user started to use the app
+                    SharedPreferences preferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putBoolean("isNewUser", false);
+                    editor.apply();
+
+                    startActivity(new  Intent(WelcomeActivity.this, IntroductionActivity.class));
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    finish();
+                } else{
+                    startActivity(new Intent(WelcomeActivity.this, HomeActivity.class));
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    finish();
+                }
+
+            }
+        });
 
     }
 
@@ -59,8 +81,23 @@ public class WelcomeActivity extends AppCompatActivity {
     public void magsimula(View view) {
         final MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.woodclick);
         mediaPlayer.start();
-        startActivity(new Intent(WelcomeActivity.this, IntroductionActivity.class));
-        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+
+        if(isNewUser){
+            // Set the isNewUser to false, since the user started to use the app
+            SharedPreferences preferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putBoolean("isNewUser", false);
+            editor.apply();
+
+            startActivity(new  Intent(WelcomeActivity.this, IntroductionActivity.class));
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+            finish();
+        } else{
+            startActivity(new Intent(WelcomeActivity.this, HomeActivity.class));
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+            finish();
+        }
+
         finish();
     }
 }
