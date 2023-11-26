@@ -216,6 +216,13 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
                 clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.fred), PorterDuff.Mode.MULTIPLY);
                 clickedButton.setText("MALI");
                 selectedAnswer  = clickedButton.getText().toString();
+                if (OpA.getText().toString() == SaranggolaQA.Correct_answer_test1[currentQuestionIndex]){
+                    OpA.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
+
+                } else if (OpB.getText().toString() == SaranggolaQA.Correct_answer_test1[currentQuestionIndex]) {
+                    OpB.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
+
+                }
 
 
             }
@@ -252,6 +259,21 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
                 clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.fred), PorterDuff.Mode.MULTIPLY);
                 clickedButton.setText("MALI");
                 selectedAnswer  = clickedButton.getText().toString();
+                if (OpA_test2.getText().toString() == SaranggolaQA.Correct_answer_test2[currentQuestionIndex_test2]){
+                    OpA_test2.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
+
+                } else if (OpB_test2.getText().toString() == SaranggolaQA.Correct_answer_test2[currentQuestionIndex_test2]) {
+                    OpB_test2.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
+
+                }
+                else if (OpC_test2.getText().toString() == SaranggolaQA.Correct_answer_test2[currentQuestionIndex_test2]) {
+                    OpC_test2.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
+
+                }
+                else if (OpD_test2.getText().toString() == SaranggolaQA.Correct_answer_test2[currentQuestionIndex_test2]) {
+                    OpD_test2.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
+
+                }
 
 
             }
@@ -289,6 +311,25 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
                 clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.fred), PorterDuff.Mode.MULTIPLY);
                 clickedButton.setText("MALI");
                 selectedAnswer  = clickedButton.getText().toString();
+                if (OpA_test3.getText().toString() == SaranggolaQA.Correct_answer_test3[currentQuestionIndex_test3]){
+                    OpA_test3.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
+
+                } else if (OpB_test3.getText().toString() == SaranggolaQA.Correct_answer_test3[currentQuestionIndex_test3]) {
+                    OpB_test3.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
+
+                }
+                else if (OpC_test3.getText().toString() == SaranggolaQA.Correct_answer_test3[currentQuestionIndex_test3]) {
+                    OpC_test3.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
+
+                }
+                else if (OpD_test3.getText().toString() == SaranggolaQA.Correct_answer_test3[currentQuestionIndex_test3]) {
+                    OpD_test3.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
+
+                }
+                else if (OpE_test3.getText().toString() == SaranggolaQA.Correct_answer_test3[currentQuestionIndex_test3]) {
+                    OpE_test3.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
+
+                }
 
 
             }

@@ -210,15 +210,23 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
                 final MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.correct_audio);
                 mediaPlayer.start();
                 clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
-                clickedButton.setText("CORRECT");
+                clickedButton.setText("TAMA");
                 score_test1_value++;
             }
             else{
                 final MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.wrong_audio);
                 mediaPlayer.start();
                 clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.fred), PorterDuff.Mode.MULTIPLY);
-                clickedButton.setText("WRONG");
+                clickedButton.setText("MALI");
                 selectedAnswer  = clickedButton.getText().toString();
+                if (OpA.getText().toString() == MabangisQA.Correct_answer_test1[currentQuestionIndex]){
+                    OpA.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
+                }
+                else {
+                    OpB.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
+
+                }
+
 
 
             }
@@ -245,15 +253,24 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
                 final MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.correct_audio);
                 mediaPlayer.start();
                 clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
-                clickedButton.setText("CORRECT");
+                clickedButton.setText("TAMA");
                 score_test2_value++;
             }
             else{
                 final MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.wrong_audio);
                 mediaPlayer.start();
                 clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.fred), PorterDuff.Mode.MULTIPLY);
-                clickedButton.setText("WRONG");
+                clickedButton.setText("MALI");
                 selectedAnswer  = clickedButton.getText().toString();
+                if (OpA_test2.getText().toString() == MabangisQA.Correct_answer_test2[currentQuestionIndex_test2]){
+                    OpA_test2.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
+                } else if (OpB_test2.getText().toString() == MabangisQA.Correct_answer_test2[currentQuestionIndex_test2]) {
+                    OpB_test2.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
+
+                }else if (OpC_test2.getText().toString() == MabangisQA.Correct_answer_test2[currentQuestionIndex_test2]) {
+                    OpC_test2.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
+
+                }
 
 
             }
@@ -282,7 +299,7 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
                 final MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.correct_audio);
                 mediaPlayer.start();
                 clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
-                clickedButton.setText("CORRECT");
+                clickedButton.setText("TAMA");
                 score_test3_value++;
             }
             else{
@@ -290,8 +307,25 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
                 mediaPlayer.setVolume(100,100);
                 mediaPlayer.start();
                 clickedButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.fred), PorterDuff.Mode.MULTIPLY);
-                clickedButton.setText("WRONG");
+                clickedButton.setText("MALI");
                 selectedAnswer  = clickedButton.getText().toString();
+                if (OpA_test3.getText().toString() == MabangisQA.Correct_answer_test3[currentQuestionIndex_test3]){
+                    OpA_test3.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
+                } else if (OpB_test3.getText().toString() == MabangisQA.Correct_answer_test3[currentQuestionIndex_test3]) {
+                    OpB_test3.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
+
+                }else if (OpC_test3.getText().toString() == MabangisQA.Correct_answer_test3[currentQuestionIndex_test3]) {
+                    OpC_test3.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
+
+                }
+                else if (OpD_test3.getText().toString() == MabangisQA.Correct_answer_test3[currentQuestionIndex_test3]) {
+                    OpD_test3.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
+
+                }
+                else if (OpE_test3.getText().toString() == MabangisQA.Correct_answer_test3[currentQuestionIndex_test3]) {
+                    OpE_test3.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.MULTIPLY);
+
+                }
 
 
             }
@@ -474,10 +508,10 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
 
     void test_Panuto(){
         if (activity == 0){
-            panuto_text.setText(R.string.Panuto2_kite);
+            panuto_text.setText(R.string.Panuto2);
 
         } else if (activity == 1) {
-            panuto_text.setText(R.string.Panuto3_kite);
+            panuto_text.setText(R.string.Panuto3);
 
         }
 
@@ -491,8 +525,8 @@ public class Mabangis extends AppCompatActivity implements View.OnClickListener{
             @Override
             public void onClick(View v) {
                 if (activity == 0){
-                    panuto_text.setText(R.string.Panuto2_kite);
                     relativeLayout_test1.setVisibility(View.GONE);
+                    panuto_text.setText(R.string.Panuto3);
                     panuto.setVisibility(View.GONE);
                     activity++;
                     continue_test2();
