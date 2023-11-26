@@ -17,6 +17,7 @@ import android.widget.TextView;
 import com.teamloopit.e_bookabularyo.R;
 
 public class WelcomeActivity extends AppCompatActivity {
+    private MediaPlayer mediaPlayer;
     Animation top,left,bot;
     ImageView Logo;
     TextView textView;
@@ -30,6 +31,7 @@ public class WelcomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
+        mediaPlayer = MediaPlayer.create(this, R.raw.woodclick);
 
         Logo = findViewById(R.id.logo);
         textView = findViewById(R.id.text_desc);
@@ -57,6 +59,7 @@ public class WelcomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(isNewUser){
+                    playSound();
                     // Set the isNewUser to false, since the user started to use the app
                     SharedPreferences preferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
                     SharedPreferences.Editor editor = preferences.edit();
@@ -67,6 +70,7 @@ public class WelcomeActivity extends AppCompatActivity {
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                     finish();
                 } else{
+                    playSound();
                     startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                     finish();
@@ -98,5 +102,11 @@ public class WelcomeActivity extends AppCompatActivity {
             finish();
         }
 
+    }
+
+    private void playSound() {
+        if (mediaPlayer != null) {
+            mediaPlayer.start();
+        }
     }
 }

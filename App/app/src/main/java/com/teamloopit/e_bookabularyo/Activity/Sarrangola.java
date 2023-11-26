@@ -392,32 +392,32 @@ public class Sarrangola extends AppCompatActivity implements View.OnClickListene
             return;
         }
         if (currentQuestionIndex_test2 == 0){
-            questions2.setText(R.string.Q1_test2);
+            questions2.setText(R.string.Q1_test1);
         } else if (currentQuestionIndex_test2 == 1) {
-            questions2.setText(R.string.Q2_test2);
+            questions2.setText(R.string.Q2_test1);
         }
         else if (currentQuestionIndex_test2 == 2) {
-            questions2.setText(R.string.Q3_test2);
+            questions2.setText(R.string.Q3_test1);
         }
         else if (currentQuestionIndex_test2 == 3) {
-            questions2.setText(R.string.Q4_test2);
+            questions2.setText(R.string.Q4_test1);
         }
         else if (currentQuestionIndex_test2 == 4) {
-            questions2.setText(R.string.Q5_test2);
+            questions2.setText(R.string.Q5_test1);
         }
         else if (currentQuestionIndex_test2 == 5) {
-            questions2.setText(R.string.Q6_test2);
+            questions2.setText(R.string.Q6_test1);
         }
         else if (currentQuestionIndex_test2 == 6) {
-            questions2.setText(R.string.Q7_test2);
+            questions2.setText(R.string.Q7_test1);
         }
         else if (currentQuestionIndex_test2 == 7) {
-            questions2.setText(R.string.Q8_test2);
+            questions2.setText(R.string.Q8_test1);
         }else if (currentQuestionIndex_test2 == 8) {
-            questions2.setText(R.string.Q9_test2);
+            questions2.setText(R.string.Q9_test1);
         }
         else if (currentQuestionIndex_test2 == 9) {
-            questions2.setText(R.string.Q10_test2);
+            questions2.setText(R.string.Q10_test1);
         }
 
         OpA_test2.setText(SaranggolaQA.Answers_test2[currentQuestionIndex_test2][0]);

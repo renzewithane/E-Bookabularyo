@@ -34,6 +34,26 @@
     <string name="Q8_test2">8. Ang mga tao ay <u>naghihikahos</u>  din.</string>
     <string name="Q9_test2">9. Nandidiring mapadikit sa <u>marurusing</u>  palad na wari bang mga kamay ay manipis.</string>
     <string name="Q10_test2">10. Ang nakikita niya ay irap, pandidiri, at <u>pagkasuklam</u> .</string>
+
+    <string name="Q1_test1">1. Minsan sa pagpapataas ng lipad ng kanyang saranggola, napatid ang tali niyon.<u>Umalagwa</u>  ang saranggola.</string>
+    <string name="Q2_test1">2. Hinabol nilang mag-ama iyon at nakita nilang <u>nakasampid</u>  sa isang balag.</string>
+    <string name="Q3_test1">3. “Anak… dalawang sapatos lamang ang gagamitin mo sa pasukang ito. Kung masira,
+saka na papalitan. Magtitipid ka rin sa damit at huwag kang gasta nang gasta. Hindi
+madaling kitain ang salapi,” <u>pagunita</u> ng kanyang ama.
+</string>
+    <string name="Q4_test1">4. <u>Disente</u> ka naman, ah. Malinis ang damit mo, husto ka sa mga gamit sa eskwela at husto
+ka rin sa pagkain.</string>
+    <string name="Q5_test1">5. Hindi na kumibo ang bata at hindi rin <u>napawi</u> ang hinanakit niya sa ama.</string>
+    <string name="Q6_test1">6. “Bata pa ako, anak. Kaya ko pang mag-asikaso ng hanapbuhay na iyan. Saka ibig ko,
+ <u>magpundar</u> ka ng sariling negosyo.”</string>
+    <string name="Q7_test1">7. <u>Nagpakagumon</u> siya sa trabaho, naghanap pa ng mga bagong kontrata hanggang sa
+loob pa ng dalawang taon, kilala na ang kanyang machine shop sa Pasay.
+</string>
+    <string name="Q8_test1">8. “Nasaan sila?” <u>usig</u>  niya sa katulong.</string>
+    <string name="Q9_test1">9.  <u>Nahalinhan</u> ng pagsisisi ang hinanakit.</string>
+    <string name="Q10_test1">10. “Huwag kang umiyak… namatay siyang walang <u>hinanakit</u> sa iyo.”
+</string>
+
     <string name="answertag">SAGUTAN</string>
 
 

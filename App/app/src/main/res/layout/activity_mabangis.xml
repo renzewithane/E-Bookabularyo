@@ -452,7 +452,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:text="Part 1"
+            android:text="UNANG BAHAGI"
             android:textSize="@dimen/text_header2"
             android:textStyle="bold"
             android:fontFamily="@font/dongle_bold"
@@ -475,7 +475,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
 
-            android:text="Part 2"
+            android:text="IKALAWANG BAHAGI"
             android:textSize="@dimen/text_header2"
             android:textStyle="bold"
             android:fontFamily="@font/dongle_bold" />
@@ -496,7 +496,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:text="Part 3"
+            android:text="IKATLONG BAHAGI"
             android:textSize="@dimen/text_header2"
             android:textStyle="bold"
             android:fontFamily="@font/dongle_bold" />
