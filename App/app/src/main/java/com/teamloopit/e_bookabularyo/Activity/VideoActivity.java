@@ -39,7 +39,7 @@ public class VideoActivity extends AppCompatActivity {
 
     }
     private void SaraggolaCreated(){
-        videoView.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.sarangg);
+        videoView.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.sarangg_final);
         videoView.start();
         MediaController mediaController = new MediaController(this);
 
